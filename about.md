@@ -29,6 +29,18 @@ Over the past few weeks, I've been trying to flex some web development muscles. 
 {% endhighlight %}
 
 
-* JS Patterns: This book made me understand why people hate on JS so much. I probably need to go over the code reuse chapter again.
+* JS Patterns: This book made me understand why people hate on JS so much. I probably need to go over the code reuse chapter again. The objective is for me to understand how to come up with the below snippet in retrospect:
+
+{% highlight javascript %}
+function inherit(C, P) {
+var F = function () {};
+ F.prototype = P.prototype;
+ C.prototype = new F();
+ C.uber = P.prototype;
+ C.prototype.constructor = C;
+}
+
+{% endhighlight %}
 * Functional JS: The book looks good so far but I'm still unsure what underscore.js brings that can't be implemented using the helper functions that JS the good parts highlights. I'll have to read more to find out
-* Node.js in Action is a good book, it's difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I'm currently working on 
+* Node.js in Action is a good book, it's difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I'm currently working on a bunch of more interesting node projects now. 
+* Front-End Frameworks: I haven't done much here, I read a blog post about ember cli but I'm going to start some projects now and come back to this topic in a few weeks.

@@ -13,9 +13,9 @@ pages_list:
   #Github
 
 comments : true
-  provider : disqus
-  disqus :
-    short_name : marksaroufim
+  # provider : disqus
+  # disqus :
+  #   short_name : marksaroufim
   # livefyre :
   #   site_id : 123
   # intensedebate :
