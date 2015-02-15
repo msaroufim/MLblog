@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <title>Mark Saroufim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Mark Saroufim</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+<div class="row-fluid">
+    <div class="span8">
+        <h2 id="what-does-it-mean-to-say-pevent--something-">What does it mean to say \(P(event) = something \)</h2>
+
+<h3 id="horse-gambling-games">Horse Gambling Games</h3>
+
+<p>Way before Probability Theory was its own field let alone a field with rigorous foundations, two fairly celebrated mathematicians Pascal and Fermat wanted to win a ton of money betting on horses. Before doing so they of course had to first check whether horse gambling was a fair game. This meant they had to first define what it means for a game to be fair. The definition they came up with involves two parties which we’ll call A and B involved in a zero sum game.</p>
+
+<ul>
+  <li>If A pays x$</li>
+  <li>And B pays x$</li>
+  <li>The winner gets paid 2x$</li>
+</ul>
+
+<p>This definition seems fairly intuitive because we can actually attribute a meaning to the title \(P(event) = something \) by claiming that:</p>
+
+<p>P(event) = how much money you’re willing to spend on a game where you could win 1$.</p>
+
+<h3 id="mathematization-of-probability-theory">Mathematization of Probability Theory</h3>
+
+<p>The above definition is indeed intuitive but it hardly seems inline with what we’d imagine a mathematical definition of probability would look like:</p>
+
+<h4 id="kolmogorovs-6-axioms">Kolmogorov’s 6 axioms</h4>
+
+<h3 id="sequential-learning">Sequential Learning</h3>
+
+<p>Von Mises was the first to propose that probability theory could find its foundation in games.</p>
+
+<ul>
+  <li>Given an observed bit string 001110</li>
+  <li>What is the probability that the next bit observed is a 1 so that sequence becomes 0011101?</li>
+</ul>
+
+<p>The question is meaningful becomes if the length of the string is sufficiently large then we expect that looking at a subset of the strings will give us a statistical estimate of the frequency of each bit.</p>
+
+<p>Fortunately we also have a method of quantifying how random a length \(n \) bitstring is: Kolmogorov Complexity!</p>
+
+<h4 id="a-brief-fugue-into-kolmogorov-complexity">A brief fugue into Kolmogorov Complexity</h4>
+<p>Suppose you’re given two strings:</p>
+
+<ul>
+  <li>\(A = 01 01 01 01 01 01 01 \) </li>
+  <li>\(B = 00 10 01 00 10 11 11 \)</li>
+</ul>
+
+<p>My question is which string looks more random? Well one way to approach this is to see if a string has many repetitions and we notice indeed that \(A \) is simply 01 repeated 7 times so it’s essentially the same message appended to itself 7 times. \(B \) on the other hand seems to lack such a clear looking pattern so we can claim that \(B \) is more random than \(A \). </p>
+
+<p>This is exactly the notion that Kolmogorov complexity captures! Unfortunately, it is also impossible to determine the Kolmogorov complexity of a random string! Whaaaat? Kolmogorov complexity belongs to a class of problems called undecidable which means that it can be reduced to the halting problem.</p>
+
+<p>If there’s enough interest in the comments I can write a whole other blog post about Kolmogorov complexity and the halting problem but to give you an intuition of what the halting problem is all about: just think about how you’d know in a finite amount of time if something is going to run forever. Turns out computer science has answers to lots of philosophical questions.</p>
+
+<h3 id="the-weak-law-of-large-numbers">The weak law of large numbers</h3>
+
+<p>The weak law of large numbers is generally covered in undergraduate statistics class using measure theoretic tools even though measure theory is outside the scope of many undergraduate programs. But it’s worth going over the “classical” proof to appreciate the game theoretic proof.</p>
+
+<p>We will make the typical assumption that we are observing \(n \) random variables \(X_1 \dots X_n \) are i.i.d variables with mean \(\mu \) and variance \(\sigma^2 \). </p>
+
+<p>The i.i.d assumption part stands for independent and identically ditributed, this assumption is an important one because without it learning seems quite impossible. In the most degenerate case if every random variable depends on every other one and each one has its own distribution it is impossible to generalize any knowledge about the points. </p>
+
+<p>Let us define \(A_n = \frac{X_1 + \dots + X_n}{n} \) to be the average value of the random variables. Then the expected value of \(A_n \) is \(E[A_n] = \frac{n \mu}{n} = \mu \). Similarly \(Var[A_n] = \frac{n \sigma^2}{n^2} = \frac{\sigma^2}{n}   \).</p>
+
+<p>The proof of the weak law of large numbers is then concluded using Chebyshev’s inequality which is simply a formalization of the intuition that rare things happen rarely.</p>
+
+<p>\(P(|A_n - \mu | \geq \epsilon) \leq Var[A_n]/ \sigma^2 = \frac{\sigma^2}{n \epsilon^2}  \)</p>
+
+<p>Where is the measure theory you may ask? Well it’s hidden in the proof of Chebyshev’s inequality whose proof generally goes something like:</p>
+
+<h3 id="bounded-fair-coin-game">Bounded Fair Coin Game</h3>
+
+<p>Now we will instead show how to prove the weak law of large numbers using games instead. We will setup a game between two parties that we will call the skeptic and nature.</p>
+
+<ul>
+  <li>\(K_i \) will be the skeptic capital at time \(i \)</li>
+  <li>\(M_n \) is the amount of tickets that the skeptic purchases</li>
+  <li>\(x_n \) is the value of a ticket determined by nature</li>
+</ul>
+
+<p>Now we can finally introduce the game:</p>
+
+<ul>
+  <li>\(K_0 = 1 \)</li>
+  <li>For \(n = 1,2 \dots \):
+    <ul>
+      <li>Skeptic announces \(M_n \in R \)</li>
+      <li>Reality announces \(x_n \in {0,1 } \)</li>
+      <li>\(K_n = K_{n - 1} + M_{n}x_{n} \)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>What we will prove is that there exists a winning strategy for the skeptic. But first we will use a favorite trick employed by philosophers and first define what we mean by winning. The relationship with the weak law of large numbers will come out soon.</p>
+
+<p>We claim that the skeptic wins \(K_n &gt; 0 \) for all \(n \) we call this condition the no-bankruptcy condition. And if one two things happen either:</p>
+
+<ul>
+  <li>\(\lim_{n \rightarrow \infty} \sum_{i = 1}^{n}x_i = 0 \)</li>
+</ul>
+
+<p>Or</p>
+
+<ul>
+  <li>\(\lim_{ \rightarrow \infty} K_n = \infty\)</li>
+</ul>
+
+<p>Everytime an author proposes new definitions, I find it helpful to understand what the equations mean in plain english. </p>
+
+<p>The condition after the “or” states that the skeptic wins if he becomes infinitely rich and I’m sure we can all agree that the constitutes a reasonable definition of winning. </p>
+
+<p>The first needs some more clarification it states that if the outcome of the game is truly random then the skeptic wins, what is meant here is that if nature plays a completely random strategy then no winning strategy exists so the skeptic can’t possibly play better than any other skeptic in retrospect. Trying to predict the stock price of a good that behaves arbitrarily is not. </p>
+
+<p>Note how I use the term arbitrarily instead of the term randomly, this distinction seems pendantic but is quite important. Since randomly means according to some distribution while arbitrarily means there is absolutely no limitation to how a random variable may act. </p>
+
+<p>Now let’s outline a sketch of how we will prove that there exists a winning strategy for the skeptic. If the skeptic bets an infinitely small amount \(\epsilon \) on heads then nature will be forced to not play heads often or else the skeptic will become infinitely rich. Therefore nature will start playing tails, when that happens the skeptic .</p>
+
+<p>TLDR: If nature’s strategy is not completely uniform, meaning if nature does not play heads as often as tails then the skeptic can learn nature’s strategy and become infinitely rich by playing an infinite number of rounds.</p>
+
+<p>And that’s the proof of the weak law of large numbers! If you think of nature as limiting.</p>
+
+<p>Not only is this a completely valid proof of the weak law of large numbers it also does not make the i.i.d assumption so it also implies the measure theoretic result!</p>
+
+<p>\(A \wedge B \rightarrow A \)</p>
+
+<h3 id="epilogue">Epilogue</h3>
+
+<p>The efficient market hypothesis is an economic concept that states that it is impossible to consistently achieve better returns than the market. Did we also prove this statement as a corollary?</p>
+
+    </div>
+    <div class="span4">
+        <h3>About me</h3>
+
+<p>Hey I'm Mark, I work at Microsoft as a PM in the Shared Data Platform. Before that I spent a few months working in the Analytics group at Bing Ads. Prior to that I spent two years at UC San Diego doing research in Machine Learning. </p>
+
+<h3>Latest Posts</h3>
+<ul>
+  
+    <li><a href="/2015/02/14/quantum-computers-can-simulate-classical-computers/">Quantum Computers Can Simulate Classical Computers</a></li>
+  
+    <li><a href="/2015/02/14/probability-without-measure/">Probability without measure theory</a></li>
+  
+</ul>
+    </div>
+</div>
+
+    </div>
+
+  </body>
+</html>

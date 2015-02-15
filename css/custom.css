@@ -1,0 +1,9 @@
+body {
+	padding-top: 60px;
+}
+
+
+.navbar navbar-inner {
+	color: silver;
+	background-color: silver;
+}
