@@ -1,14 +1,46 @@
 body {
-	padding-top: 60px;
+	padding-top: 20px;
 }
 
 
+.avatar {
+    width:128px;
+    margin: 10px;
+    border:10px transparent silver;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+}
+
+
+
 .container {
+	margin-top: 20px; 
 	overflow-x: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #nav {
 	position: fixed;
+	float:left;
+	top: 300px;
+	left: 20px;
+
+}
+
+#mark {
+	float: left;
+	left: 20px;
+	position: absolute;
+
+}
+
+#twitter {
+	position: fixed;
+	bottom: 0px;
+	left: 50px;
+	bottom: 10px;
 }
 
 element.style {
