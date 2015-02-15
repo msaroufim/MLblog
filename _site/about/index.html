@@ -64,42 +64,34 @@
 
 <div class="row-fluid">
     <div class="span8">
-        <h1 id="section">++++++++[&gt;++++[&gt;++&gt;+++&gt;+++&gt;+««-]&gt;+&gt;+&gt;-»+[&lt;]&lt;-]».&gt;—.+++++++..+++.».&lt;-.&lt;.+++.——.——–.»+.&gt;++.</h1>
+        <p>If you’re here and interested to learn more about my work in industry or academia, I’d recommend you follow the links to the left on the navigation bar.</p>
 
-<p>Hey Everyone, welcome to my blog. I’ll be posting things that I think are cool, this will include summarizing cool machine learning or theoretical computer science results and when applicable an in browser demo of the results. Sometimes I’ll also post my personal opinions on tech and philosophy. I’m still learning how Jekyll works so I hope that the aesthetics of this blog will improve over time.</p>
+<h4 id="what-ive-been-up-to-with-web-development">What I’ve been up to with Web Development</h4>
 
-<div class="row-fluid">
-  <div class="span12">
-    <h2>Quantum Computers Can Simulate Classical Computers</h2>
-    <h4>14 February 2015</h4>
-    <p>
-      Is Quantum Computing Hard to Understand? I was very fortunate my last quarter as a graduate student at UCSD to have helped organize a quantum computing seminar. I was strongly influenced by Aaronson’s excellent book Quantum Computing Since Democritus where Aaronson’s makes a strong point that Quantum Computing is easy if you abstract away the physics. That may sound controversial but it really isn’t, do algorithmists think of the electromagnetic waves storing bits on disk...<br />
-      <a href="/2015/02/14/quantum-computers-can-simulate-classical-computers/">Read More</a>
-    </p>
-  </div>
-</div>
+<p>Over the past few weeks, I’ve been trying to flex some web development muscles. I’ve been frantically going over both frontend and backend books. 
+* JS and Jquery: It’s refreshing to see a good CS book written by people with a good design background. The book really is beautiful and the graphics help make a lot of things really clear. For example, I understood why Jquery was necessary by looking at graphical drawings of the DOM that show how .nextsibling works across different browsers.</p>
 
-<div class="row-fluid">
-  <div class="span12">
-    <h2>Probability without measure theory</h2>
-    <h4>14 February 2015</h4>
-    <p>
-      What does it mean to say \(P(event) = something \) Horse Gambling Games Way before Probability Theory was its own field let alone a field with rigorous foundations, two fairly celebrated mathematicians Pascal and Fermat wanted to win a ton of money betting on horses. Before doing so they of course had to first check whether horse gambling was a fair game. This meant they had to first define what it means for a game...<br />
-      <a href="/2015/02/14/probability-without-measure/">Read More</a>
-    </p>
-  </div>
-</div>
+<ul>
+  <li>JS the good parts: A classic! and for a good reason too, I found myself going huh to wow. By the end of this good I couldn’t understand why people complained so much about JS. Some favorites included:</li>
+</ul>
 
-<div class="row-fluid">
-  <div class="span12">
-    <h2>Scifi And Predicting The Future</h2>
-    <h4>15 November 2014</h4>
-    <p>
-      Why Sci-Fi might not be so good at predicting the future: Reasoning by analogy sucks for making predictions I recently just finished Asimov’s fourth Foundation Book: Foundation and Edge. The series is excellent and I wholeheartedly recommend it to any sci-fi fans. The empire is about to fall into 30000 years of darkness when Hari Seldon Mathematician/Prophet establishes a Foundation of scholars to document all of human knowledge as part of a complicated 1000 year...<br />
-      <a href="/2014/11/15/scifi-and-predicting-the-future/">Read More</a>
-    </p>
-  </div>
-</div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">memoizer</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">memo</span><span class="p">,</span> <span class="nx">fundamental</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">shell</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">memo</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">result</span> <span class="o">!==</span> <span class="s1">&#39;number&#39;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">result</span> <span class="o">=</span> <span class="nx">fundamental</span><span class="p">(</span><span class="nx">shell</span><span class="p">,</span> <span class="nx">n</span><span class="p">);</span>
+                <span class="nx">memo</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+        <span class="p">};</span>
+        <span class="k">return</span> <span class="nx">shell</span><span class="p">;</span>
+    <span class="p">};</span></code></pre></div>
+
+<ul>
+  <li>JS Patterns: This book made me understand why people hate on JS so much. I probably need to go over the code reuse chapter again.</li>
+  <li>Functional JS: The book looks good so far but I’m still unsure what underscore.js brings that can’t be implemented using the helper functions that JS the good parts highlights. I’ll have to read more to find out</li>
+  <li>Node.js in Action is a good book, it’s difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I’m currently working on </li>
+</ul>
 
     </div>
     <div class="span4">

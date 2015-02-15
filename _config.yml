@@ -5,7 +5,7 @@ url: "http://localhost:4000"
 
 paginate: 10
 permalink: pretty
-
+highlighter: pygments
 pages_list:       
   About: '/about'
   Archive: '/archive'
