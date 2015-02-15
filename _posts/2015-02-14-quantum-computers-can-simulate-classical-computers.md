@@ -26,12 +26,10 @@ I will proceed instead proceed in two steps
 
 1- I point the reader to the following reference so they can see how a "NAND" gate can be implemented using the basic "AND", "OR" and "NOT" gates. The hardware implementation of "AND", "OR" gates is easy if one remembers the distinction between in-series and in-parallel circuits.
 
-2- I will prove by induction why you can write any binary function on \\(n \\) bits as a circuit consisting solely of "NAND" gates.
+2- I will sketch a proof by induction which shows why you can write any binary function $$f$$ on \\(n \\) bits as a circuit consisting solely of "NAND" gates.
 
-* Base Case (Single gate circuits: \\(n =1 \\)): 
-* Inductive Step: Assume you can construct a circuit consisting solely of "NAND" gates for any function $$f$$ on $$n$$ bits. 
-
-
+* Base Case (two bit function: \\(n =2 \\)): A single gate circuit recieves two inputs whose combination takes a total of 4 values. For each of the four rows the output can be one of two values. So the total number of possible truth table configurations for a two bit function is $$2^4$$. It's a tedious but easy exercise to find a NAND circuit corresponding to each one of those configurations.
+* Inductive Step: Assume you can construct a circuit consisting solely of "NAND" gates for any function $$f$$ on $$n$$ bits. Any $$n+1$$ bit function  
 
 
 If you've ever wondered why binary is the base of choice for computers the above is a strong argument for that choice, the other being that it is simple to represent one of two states 0 or 1 using a ground or 5V.
@@ -45,6 +43,35 @@ A quantum computer is then a function \\(f \\) of \\(n \\) quantum bits that whe
 ### Quantum Computers are at least as powerful as Classical Computers
 
 This is a neat result that I proved in the introductory lecture of the seminar, of course this result is not novel in any way: I'm not sure if it was even formally stated in a paper or just taken as a known trivial result but regardless it's a good exercise to prove your first result about quantum computers. 
+
+### Proving that quantum computers are at least as powerful as classical computers using truth tables
+
+Let's take a look at the truth table of a NAND gate
+
+<!-- ![ScreenShot](http://www.zseries.in/electronics%20lab/ics/pictures/truth%20table%20of%20ic7400.png)
+ -->
+ 
+| A | B | NAND(A,B) |
+|---|---|-----------|
+|0  |0  |1          |
+|0  |1  |1          |
+|1  |0  |1          |
+|1  |1  |0          |
+
+
+0 	0 	0 	0 	0 	0 
+0	0	1	0	0	1
+0	1	0	0	1	0
+0	1	1	0	1	1
+1	0	0	1	0	0
+1	0	1	1	0	1
+1	1	0	1	1	1
+1	1	1	1	1	0
+
+
+Now let's take a look at the truth table for a basic quantum gate the Toffoli gate. A Toffoli gate takes in three inputs and produces three outputs.
+
+Now inspect the third output in the rows for which the third input is 1. Do those rows look familiar? They should! Because they correspond exactly to the NAND gate! So we can fix the third input bit of a Toffoli gate to 1 to simulate a NAND gate. Therefore we can simulate any NAND circuit or any boolean circuit using Toffoli gates.
 
 ### Are computers more powerful if they are allowed to make coin flips?
 
@@ -63,14 +90,22 @@ Suppose you were given two large polynomials \\(P_1 \\) and \\(P_2 \\) with many
 	* Else
 		* Return: $$P_1 ! \equiv P_2$$
 
-Why does this work? Well the more times we iterate over the loop the more confident we are that the two polynomials are equivalent! For two polynomial with \\(n \\) variables we can show that
+Why does this work? Well, if for any $$x$$, $$P_1(x) != P_2(x)$$ then they are not equivalent. In addition, the more times we iterate over the loop the more confident we are that the two polynomials are equivalent! For two polynomial with \\(n \\) variables we can show that
 
 #### Simulating a coin flip using a quantum computer
 
-We will use, the basic quantum Hadamard Gate. \\(H = \frac{1}{\sqrt{2}} \\) $$\begin{bmatrix}1 & 1 \\ 1 & -1 \end{bmatrix} $$. We then apply \\(H \|0> \\)
+First we're going to have to define what a quantum bit is. We represent an arbitrary quantum bit $$a$$ as \\( | a > = \alpha | 0 > + \beta | 1 > \\)
+
+The above definition is read as a quantum bit $$a$$ is in state 0 with probability $$\alpha^2$$ and in state 1 with probability $$\beta^2$$. Next we note that any gate whether its quantum or not can be represented algebraically. 
+
+e.g: $$A \wedge B = A . B $$
+
+We will use, the basic quantum Hadamard Gate. \\(H = \frac{1}{\sqrt{2}} \\) $$\begin{bmatrix}1 & 1 \\ 1 & -1 \end{bmatrix} $$. We then apply \\(H \|0> = \frac{1}{\sqrt{2}}\|0> + \frac{1}{\sqrt{2}}\|1> \\) which when measured gives us either 0 or 1 with probability 1/2 and we're done. 
+
+This doesn't seem like a lot but it is quite significant! Think of how you'd simulate a uniform distribution over \\(n \\) variables using a uniform distribution over 2 variables. Also related, I hear simulating a fair coin using an unbiased coin is a popular interview question. Another natural question to think about is then how would you simulate a biased coin using an unbiased one?
 
 ### Epilogue
-Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover's search algorithm and Shor's factoring algorithm. If you can't wait then I'd highly recommend Chapter in 10 
+Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover's search algorithm and Shor's factoring algorithm. If you can't wait then I'd highly recommend Chapter in 10. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I'd recommend you check out http://www.cse.ucsd.edu/theory_reading_group for some inspiration.  
 see how to add links and references in the end. The two big open questions are perhaps: can quantum computers actually be built? If they can, can they solve more problems than classical computers? Nobody knows, but as Aaronson would say: all possibilities are equally intriguing since either we learn some pretty fundamental limitations of phyics or we get swanky new quantum computers.
 
 http://cseweb.ucsd.edu/~dasgupta/book/index.html>Chapter 10

@@ -72,11 +72,11 @@
 
 <p>1- I point the reader to the following reference so they can see how a “NAND” gate can be implemented using the basic “AND”, “OR” and “NOT” gates. The hardware implementation of “AND”, “OR” gates is easy if one remembers the distinction between in-series and in-parallel circuits.</p>
 
-<p>2- I will prove by induction why you can write any binary function on \(n \) bits as a circuit consisting solely of “NAND” gates.</p>
+<p>2- I will sketch a proof by induction which shows why you can write any binary function <script type="math/tex">f</script> on \(n \) bits as a circuit consisting solely of “NAND” gates.</p>
 
 <ul>
-  <li>Base Case (Single gate circuits: \(n =1 \)): </li>
-  <li>Inductive Step: Assume you can construct a circuit consisting solely of “NAND” gates for any function <script type="math/tex">f</script> on <script type="math/tex">n</script> bits. </li>
+  <li>Base Case (two bit function: \(n =2 \)): A single gate circuit recieves two inputs whose combination takes a total of 4 values. For each of the four rows the output can be one of two values. So the total number of possible truth table configurations for a two bit function is <script type="math/tex">2^4</script>. It’s a tedious but easy exercise to find a NAND circuit corresponding to each one of those configurations.</li>
+  <li>Inductive Step: Assume you can construct a circuit consisting solely of “NAND” gates for any function <script type="math/tex">f</script> on <script type="math/tex">n</script> bits. Any <script type="math/tex">n+1</script> bit function  </li>
 </ul>
 
 <p>If you’ve ever wondered why binary is the base of choice for computers the above is a strong argument for that choice, the other being that it is simple to represent one of two states 0 or 1 using a ground or 5V.</p>
@@ -88,6 +88,58 @@
 <h3 id="quantum-computers-are-at-least-as-powerful-as-classical-computers">Quantum Computers are at least as powerful as Classical Computers</h3>
 
 <p>This is a neat result that I proved in the introductory lecture of the seminar, of course this result is not novel in any way: I’m not sure if it was even formally stated in a paper or just taken as a known trivial result but regardless it’s a good exercise to prove your first result about quantum computers. </p>
+
+<h3 id="proving-that-quantum-computers-are-at-least-as-powerful-as-classical-computers-using-truth-tables">Proving that quantum computers are at least as powerful as classical computers using truth tables</h3>
+
+<p>Let’s take a look at the truth table of a NAND gate</p>
+
+<!-- ![ScreenShot](http://www.zseries.in/electronics%20lab/ics/pictures/truth%20table%20of%20ic7400.png)
+ -->
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>NAND(A,B)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>0 	0 	0 	0 	0 	0 
+0	0	1	0	0	1
+0	1	0	0	1	0
+0	1	1	0	1	1
+1	0	0	1	0	0
+1	0	1	1	0	1
+1	1	0	1	1	1
+1	1	1	1	1	0</p>
+
+<p>Now let’s take a look at the truth table for a basic quantum gate the Toffoli gate. A Toffoli gate takes in three inputs and produces three outputs.</p>
+
+<p>Now inspect the third output in the rows for which the third input is 1. Do those rows look familiar? They should! Because they correspond exactly to the NAND gate! So we can fix the third input bit of a Toffoli gate to 1 to simulate a NAND gate. Therefore we can simulate any NAND circuit or any boolean circuit using Toffoli gates.</p>
 
 <h3 id="are-computers-more-powerful-if-they-are-allowed-to-make-coin-flips">Are computers more powerful if they are allowed to make coin flips?</h3>
 
@@ -116,15 +168,32 @@
   </li>
 </ul>
 
-<p>Why does this work? Well the more times we iterate over the loop the more confident we are that the two polynomials are equivalent! For two polynomial with \(n \) variables we can show that</p>
+<p>Why does this work? Well, if for any <script type="math/tex">x</script>, <script type="math/tex">P_1(x) != P_2(x)</script> then they are not equivalent. In addition, the more times we iterate over the loop the more confident we are that the two polynomials are equivalent! For two polynomial with \(n \) variables we can show that</p>
 
 <h4 id="simulating-a-coin-flip-using-a-quantum-computer">Simulating a coin flip using a quantum computer</h4>
 
+<table>
+  <tbody>
+    <tr>
+      <td>First we’re going to have to define what a quantum bit is. We represent an arbitrary quantum bit <script type="math/tex">a</script> as \(</td>
+      <td>a &gt; = \alpha</td>
+      <td>0 &gt; + \beta</td>
+      <td>1 &gt; \)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The above definition is read as a quantum bit <script type="math/tex">a</script> is in state 0 with probability <script type="math/tex">\alpha^2</script> and in state 1 with probability <script type="math/tex">\beta^2</script>. Next we note that any gate whether its quantum or not can be represented algebraically. </p>
+
+<p>e.g: <script type="math/tex">A \wedge B = A . B </script></p>
+
 <p>We will use, the basic quantum Hadamard Gate. \(H = \frac{1}{\sqrt{2}} \) <script type="math/tex">% <![CDATA[
-\begin{bmatrix}1 & 1 \\ 1 & -1 \end{bmatrix}  %]]></script>. We then apply \(H |0&gt; \)</p>
+\begin{bmatrix}1 & 1 \\ 1 & -1 \end{bmatrix}  %]]></script>. We then apply \(H |0&gt; = \frac{1}{\sqrt{2}}|0&gt; + \frac{1}{\sqrt{2}}|1&gt; \) which when measured gives us either 0 or 1 with probability 1/2 and we’re done. </p>
+
+<p>This doesn’t seem like a lot but it is quite significant! Think of how you’d simulate a uniform distribution over \(n \) variables using a uniform distribution over 2 variables. Also related, I hear simulating a fair coin using an unbiased coin is a popular interview question. Another natural question to think about is then how would you simulate a biased coin using an unbiased one?</p>
 
 <h3 id="epilogue">Epilogue</h3>
-<p>Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover’s search algorithm and Shor’s factoring algorithm. If you can’t wait then I’d highly recommend Chapter in 10 
+<p>Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover’s search algorithm and Shor’s factoring algorithm. If you can’t wait then I’d highly recommend Chapter in 10. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I’d recommend you check out http://www.cse.ucsd.edu/theory_reading_group for some inspiration.<br />
 see how to add links and references in the end. The two big open questions are perhaps: can quantum computers actually be built? If they can, can they solve more problems than classical computers? Nobody knows, but as Aaronson would say: all possibilities are equally intriguing since either we learn some pretty fundamental limitations of phyics or we get swanky new quantum computers.</p>
 
 <p>http://cseweb.ucsd.edu/~dasgupta/book/index.html&gt;Chapter 10</p>

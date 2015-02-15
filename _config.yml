@@ -1,12 +1,12 @@
 name: "Mark Saroufim"
-description: ""
+description: "My blog about machine learning, technology and philosophy"
 
 url: "http://localhost:4000"
 
 paginate: 10
 permalink: pretty
 
-comments :
+comments : 
   provider : disqus
   disqus :
     short_name : jekyllbootstrap
