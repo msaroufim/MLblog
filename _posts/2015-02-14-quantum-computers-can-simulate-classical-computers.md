@@ -50,7 +50,7 @@ Let's take a look at the truth table of a NAND gate
 
 <!-- ![ScreenShot](http://www.zseries.in/electronics%20lab/ics/pictures/truth%20table%20of%20ic7400.png)
  -->
- 
+
 | A | B | NAND(A,B) |
 |---|---|-----------|
 |0  |0  |1          |
@@ -96,7 +96,7 @@ Why does this work? Well, if for any $$x$$, $$P_1(x) != P_2(x)$$ then they are n
 
 First we're going to have to define what a quantum bit is. We represent an arbitrary quantum bit $$a$$ as \\( | a > = \alpha | 0 > + \beta | 1 > \\)
 
-The above definition is read as a quantum bit $$a$$ is in state 0 with probability $$\alpha^2$$ and in state 1 with probability $$\beta^2$$. Next we note that any gate whether its quantum or not can be represented algebraically. 
+The above definition is read as a quantum bit $$a$$ is in state 0 with probability $$\alpha^2$$ and in state 1 with probability $$\beta^2$$. When people talk about how a quantum bit can be both 1 and 0 at the same time they are refering to the above expression yet they are incorrectly interpreting it. There is nothing weird, magical or massively paralell about a distribution over two variables. Next we note that any gate whether its quantum or not can be represented algebraically. 
 
 e.g: $$A \wedge B = A . B $$
 
@@ -106,6 +106,6 @@ This doesn't seem like a lot but it is quite significant! Think of how you'd sim
 
 ### Epilogue
 Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover's search algorithm and Shor's factoring algorithm. If you can't wait then I'd highly recommend Chapter in 10. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I'd recommend you check out http://www.cse.ucsd.edu/theory_reading_group for some inspiration.  
-see how to add links and references in the end. The two big open questions are perhaps: can quantum computers actually be built? If they can, can they solve more problems than classical computers? Nobody knows, but as Aaronson would say: all possibilities are equally intriguing since either we learn some pretty fundamental limitations of phyics or we get swanky new quantum computers.
+see how to add links and references in the end. The two big open questions are perhaps: can quantum computers actually be built? If they can, can they solve more problems than classical computers? The complexity theory community seems to think so. As Aaronson would say: all possibilities are equally intriguing since either we learn some pretty fundamental limitations of phyics or we get swanky new quantum computers.
 
 http://cseweb.ucsd.edu/~dasgupta/book/index.html>Chapter 10

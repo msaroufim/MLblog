@@ -3,7 +3,33 @@ body {
 }
 
 
-.navbar navbar-inner {
-	color: silver;
-	background-color: silver;
+.container {
+	overflow-x: hidden;
+}
+
+#nav {
+	position: fixed;
+}
+
+element.style {
+}
+html, body {
+overflow-x: hidden;
+}
+body {
+
+font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+letter-spacing: -0.02em;
+font-weight: 400;
+font-style: normal;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-moz-font-feature-settings: "liga" on;
+color: rgba(0,0,0,0.8);
+font-size: 18px;
+line-height: 1.4;
+}
+body {
+margin: 0;
 }
