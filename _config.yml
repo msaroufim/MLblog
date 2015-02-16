@@ -1,7 +1,7 @@
 name: "Mark Saroufim"
 description: "My blog about machine learning, technology and philosophy"
 
-url: "http://localhost:4000"
+url: "127.0.0.1:4000"
 
 paginate: 10
 permalink: pretty
