@@ -80,6 +80,8 @@ trying an external reference now, should be careful if image ever disappers it m
     <div class="span8">
         <h2 id="what-does-it-mean-to-say-pevent--something-">What does it mean to say \(P(event) = something \)</h2>
 
+<p>This blog post is an attempt to explain the following <a href="https://www.dropbox.com/s/zwio6k94ix40q1s/ItsOnlyAGame.pdf">tutorial</a> to a more general audience. I gave that tutorial to explain some of my favorite ideas in the Shafer and Vovk book <a href="http://www.amazon.com/Probability-Finance-Its-Only-Game/dp/0471402265/ref=sr_1_1?ie=UTF8&amp;qid=1424136245&amp;sr=8-1&amp;keywords=probability+and+finance">Probability and Finance, It’s only a Game!</a></p>
+
 <h3 id="horse-gambling-games">Horse Gambling Games</h3>
 
 <p>Way before Probability Theory was its own field let alone a field with rigorous foundations, two fairly celebrated mathematicians Pascal and Fermat wanted to win a ton of money betting on horses. Before doing so they of course had to first check whether horse gambling was a fair game. This meant they had to first define what it means for a game to be fair. The definition they came up with involves two parties which we’ll call A and B involved in a zero sum game.</p>
@@ -96,9 +98,11 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <h3 id="mathematization-of-probability-theory">Mathematization of Probability Theory</h3>
 
-<p>The above definition is indeed intuitive but it hardly seems inline with what we’d imagine a mathematical definition of probability would look like:</p>
+<p>The above definition is indeed intuitive but it hardly seems inline with what we’d imagine a mathematical definition of probability would look like.</p>
 
 <h4 id="kolmogorovs-6-axioms">Kolmogorov’s 6 axioms</h4>
+
+<p>Kolmogorov rigorously formalized probability theory using just 6 axioms; what was previously a subfield of mathematical physics became its own deep topic. I might need a whole other blog post on Kolmogorov’s 6 axioms but I’ll mention one small but interesting thing here. The sixth axiom uses what is called the axiom of choice. The axiom of choice is . For our purposes though it would be interesting to explore the possibility of a different foundation to probability theory in games instead of measure theory.</p>
 
 <h3 id="sequential-learning">Sequential Learning</h3>
 
@@ -192,7 +196,7 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <p>TLDR: If nature’s strategy is not completely uniform, meaning if nature does not play heads as often as tails then the skeptic can learn nature’s strategy and become infinitely rich by playing an infinite number of rounds.</p>
 
-<p>And that’s the proof of the weak law of large numbers! If you think of nature as limiting.</p>
+<p>And that’s the proof of the weak law of large numbers! We can think of nature as an entity trying to minimize rare events: that’s why there aren’t that many infinitely rich folks out there! (Actually the real proof is slightly more complicated and is covered in my original <a href="https://www.dropbox.com/s/zwio6k94ix40q1s/ItsOnlyAGame.pdf">tutorial</a></p>
 
 <p>Not only is this a completely valid proof of the weak law of large numbers it also does not make the i.i.d assumption so it also implies the measure theoretic result!</p>
 

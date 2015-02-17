@@ -5,6 +5,8 @@ layout: default
 
 ## What does it mean to say \\(P(event) = something \\)
 
+This blog post is an attempt to explain the following [tutorial](https://www.dropbox.com/s/zwio6k94ix40q1s/ItsOnlyAGame.pdf) to a more general audience. I gave that tutorial to explain some of my favorite ideas in the Shafer and Vovk book [Probability and Finance, It's only a Game!](http://www.amazon.com/Probability-Finance-Its-Only-Game/dp/0471402265/ref=sr_1_1?ie=UTF8&qid=1424136245&sr=8-1&keywords=probability+and+finance)
+
 ### Horse Gambling Games
 
 Way before Probability Theory was its own field let alone a field with rigorous foundations, two fairly celebrated mathematicians Pascal and Fermat wanted to win a ton of money betting on horses. Before doing so they of course had to first check whether horse gambling was a fair game. This meant they had to first define what it means for a game to be fair. The definition they came up with involves two parties which we'll call A and B involved in a zero sum game.
@@ -21,10 +23,11 @@ P(event) = how much money you're willing to spend on a game where you could win 
 
 ### Mathematization of Probability Theory
 
-The above definition is indeed intuitive but it hardly seems inline with what we'd imagine a mathematical definition of probability would look like:
+The above definition is indeed intuitive but it hardly seems inline with what we'd imagine a mathematical definition of probability would look like.
 
 #### Kolmogorov's 6 axioms
 
+Kolmogorov rigorously formalized probability theory using just 6 axioms; what was previously a subfield of mathematical physics became its own deep topic. I might need a whole other blog post on Kolmogorov's 6 axioms but I'll mention one small but interesting thing here. The sixth axiom uses what is called the axiom of choice. The axiom of choice is . For our purposes though it would be interesting to explore the possibility of a different foundation to probability theory in games instead of measure theory.
 
 ### Sequential Learning
 
@@ -103,7 +106,7 @@ Now let's outline a sketch of how we will prove that there exists a winning stra
 
 TLDR: If nature's strategy is not completely uniform, meaning if nature does not play heads as often as tails then the skeptic can learn nature's strategy and become infinitely rich by playing an infinite number of rounds.
 
-And that's the proof of the weak law of large numbers! If you think of nature as limiting.
+And that's the proof of the weak law of large numbers! We can think of nature as an entity trying to minimize rare events: that's why there aren't that many infinitely rich folks out there! (Actually the real proof is slightly more complicated and is covered in my original [tutorial](https://www.dropbox.com/s/zwio6k94ix40q1s/ItsOnlyAGame.pdf)
 
 Not only is this a completely valid proof of the weak law of large numbers it also does not make the i.i.d assumption so it also implies the measure theoretic result!
 

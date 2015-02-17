@@ -4,7 +4,7 @@ title: About
 ---
 ## Serious Work Stuff
 
-If you're here and interested to learn more about my work in industry or academia, I'd recommend you follow the links to the left on the navigation bar. My email is on the homepage, but you're going to have to look for it to find it.
+If you're here and interested to learn more about my work in industry or academia, I'd recommend you follow the links to the left on the navigation bar.
 
 ## Standup Comedy
 
