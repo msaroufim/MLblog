@@ -90,67 +90,67 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <div class="row-fluid">
     <div class="span8">
-        <h2 id="serious-work-stuff">Serious Work Stuff</h2>
+        <h2 id="serious_work_stuff">Serious Work Stuff</h2>
 
 <p>If you’re here and interested to learn more about my work in industry or academia, I’d recommend you follow the links to the left on the navigation bar.</p>
 
-<h2 id="standup-comedy">Standup Comedy</h2>
+<h2 id="standup_comedy">Standup Comedy</h2>
 
 <p>I took a wonderful class at the University of Washington with Peter Greyy (Yes two y’s) on standup comedy, we met for 3 sessions then had to perform in front of a live audience at the comedy underground in Seattle. You can chekout the video in navigation bar, it’s a 3min video whose material took me about 20h worth of work. I would love to do more but I’ve been pretty swamped with learning web development.</p>
 
-<h2 id="what-ive-been-up-to-with-web-development">What I’ve been up to with Web Development</h2>
+<h2 id="what_ive_been_up_to_with_web_development">What I’ve been up to with Web Development</h2>
 
-<p>Since the beginning of February, I’ve been trying to flex some web development muscles. I hadn’t done any web development before but I’ve getting more excited about sharing some of my work so I’ve been frantically going over both frontend and backend books to do so. </p>
-
-<ul>
-  <li>
-    <p>JS and Jquery: It’s refreshing to see a good CS book written by people with a good design background. The book really is beautiful and the graphics help make a lot of things really clear. For example, I understood why Jquery was necessary by looking at graphical drawings of the DOM that show how .nextsibling works across different browsers.</p>
-  </li>
-  <li>
-    <p>JS the good parts: A classic! and for a good reason too, I found myself going huh to wow. By the end of this good I couldn’t understand why people complained so much about JS. Some favorites included:</p>
-  </li>
-</ul>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">memoizer</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">memo</span><span class="p">,</span> <span class="nx">fundamental</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">shell</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">memo</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span>
-            <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">result</span> <span class="o">!==</span> <span class="s1">&#39;number&#39;</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">result</span> <span class="o">=</span> <span class="nx">fundamental</span><span class="p">(</span><span class="nx">shell</span><span class="p">,</span> <span class="nx">n</span><span class="p">);</span>
-                <span class="nx">memo</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-        <span class="p">};</span>
-        <span class="k">return</span> <span class="nx">shell</span><span class="p">;</span>
-    <span class="p">};</span></code></pre></div>
+<p>Since the beginning of February, I’ve been trying to flex some web development muscles. I hadn’t done any web development before but I’ve getting more excited about sharing some of my work so I’ve been frantically going over both frontend and backend books to do so.</p>
 
 <ul>
-  <li>JS Patterns: This book made me understand why people hate on JS so much. I probably need to go over the code reuse chapter again. The objective is for me to understand how to come up with the below snippet from the perspective of someone who has never seen it.</li>
+<li>
+<p>JS and Jquery: It’s refreshing to see a good CS book written by people with a good design background. The book really is beautiful and the graphics help make a lot of things really clear. For example, I understood why Jquery was necessary by looking at graphical drawings of the DOM that show how .nextsibling works across different browsers.</p>
+</li>
+
+<li>
+<p>JS the good parts: A classic! and for a good reason too, I found myself going huh to wow. By the end of this good I couldn’t understand why people complained so much about JS. Some favorites included:</p>
+</li>
 </ul>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">inherit</span><span class="p">(</span><span class="nx">C</span><span class="p">,</span> <span class="nx">P</span><span class="p">)</span> <span class="p">{</span>
-<span class="kd">var</span> <span class="nx">F</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span>
- <span class="nx">F</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">P</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
- <span class="nx">C</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">F</span><span class="p">();</span>
- <span class="nx">C</span><span class="p">.</span><span class="nx">uber</span> <span class="o">=</span> <span class="nx">P</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
- <span class="nx">C</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">C</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
-
+<div class='highlight'><pre><code class='javascript'>   <span class='kd'>var</span> <span class='nx'>memoizer</span> <span class='o'>=</span> <span class='kd'>function</span> <span class='p'>(</span><span class='nx'>memo</span><span class='p'>,</span> <span class='nx'>fundamental</span><span class='p'>)</span> <span class='p'>{</span>
+        <span class='kd'>var</span> <span class='nx'>shell</span> <span class='o'>=</span> <span class='kd'>function</span> <span class='p'>(</span><span class='nx'>n</span><span class='p'>)</span> <span class='p'>{</span>
+            <span class='kd'>var</span> <span class='nx'>result</span> <span class='o'>=</span> <span class='nx'>memo</span><span class='p'>[</span><span class='nx'>n</span><span class='p'>];</span>
+            <span class='k'>if</span> <span class='p'>(</span><span class='k'>typeof</span> <span class='nx'>result</span> <span class='o'>!==</span> <span class='s1'>&#39;number&#39;</span><span class='p'>)</span> <span class='p'>{</span>
+                <span class='nx'>result</span> <span class='o'>=</span> <span class='nx'>fundamental</span><span class='p'>(</span><span class='nx'>shell</span><span class='p'>,</span> <span class='nx'>n</span><span class='p'>);</span>
+                <span class='nx'>memo</span><span class='p'>[</span><span class='nx'>n</span><span class='p'>]</span> <span class='o'>=</span> <span class='nx'>result</span><span class='p'>;</span>
+            <span class='p'>}</span>
+            <span class='k'>return</span> <span class='nx'>result</span><span class='p'>;</span>
+        <span class='p'>};</span>
+        <span class='k'>return</span> <span class='nx'>shell</span><span class='p'>;</span>
+    <span class='p'>};</span>
+</code></pre></div>
 <ul>
-  <li>Functional JS: The book looks good so far but I’m still unsure what underscore.js brings that can’t be implemented using the helper functions that JS the good parts highlights. I’ll have to read more to find out</li>
-  <li>Node.js in Action is a good book, it’s difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I’m currently working on a bunch of more interesting node projects now. </li>
-  <li>If Hemingway wrote JS: This is a creative programming book that shows code examples written in the style of authors ranging from 2pac, Kerouac to Roy. I expected this book to be more fun, I can’t say that I got much out of it. I’m remined of Richard Hamming’s remark which goes: If you wanna be succesful then study successes.</li>
-  <li>Front-End Frameworks: I’m still scratching the surface here. I started looking into the ember and ember data docs and really appreciated how well implemented the observer pattern (discussed in JS patterns) was used to create awesome functionality like:</li>
+<li>JS Patterns: This book made me understand why people hate on JS so much. I probably need to go over the code reuse chapter again. The objective is for me to understand how to come up with the below snippet from the perspective of someone who has never seen it.</li>
 </ul>
+<div class='highlight'><pre><code class='javascript'><span class='kd'>function</span> <span class='nx'>inherit</span><span class='p'>(</span><span class='nx'>C</span><span class='p'>,</span> <span class='nx'>P</span><span class='p'>)</span> <span class='p'>{</span>
+<span class='kd'>var</span> <span class='nx'>F</span> <span class='o'>=</span> <span class='kd'>function</span> <span class='p'>()</span> <span class='p'>{};</span>
+ <span class='nx'>F</span><span class='p'>.</span><span class='nx'>prototype</span> <span class='o'>=</span> <span class='nx'>P</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>;</span>
+ <span class='nx'>C</span><span class='p'>.</span><span class='nx'>prototype</span> <span class='o'>=</span> <span class='k'>new</span> <span class='nx'>F</span><span class='p'>();</span>
+ <span class='nx'>C</span><span class='p'>.</span><span class='nx'>uber</span> <span class='o'>=</span> <span class='nx'>P</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>;</span>
+ <span class='nx'>C</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>.</span><span class='nx'>constructor</span> <span class='o'>=</span> <span class='nx'>C</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
+<ul>
+<li>Functional JS: The book looks good so far but I’m still unsure what underscore.js brings that can’t be implemented using the helper functions that JS the good parts highlights. I’ll have to read more to find out</li>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">fullName</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;firstName&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;lastName&#39;</span><span class="p">);</span>
-  <span class="p">}.</span><span class="nx">property</span><span class="p">(</span><span class="s1">&#39;firstName&#39;</span><span class="p">,</span> <span class="s1">&#39;lastName&#39;</span><span class="p">)</span>
-<span class="p">});</span></code></pre></div>
+<li>Node.js in Action is a good book, it’s difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I’m currently working on a bunch of more interesting node projects now.</li>
 
+<li>If Hemingway wrote JS: This is a creative programming book that shows code examples written in the style of authors ranging from 2pac, Kerouac to Roy. I expected this book to be more fun, I can’t say that I got much out of it. I’m remined of Richard Hamming’s remark which goes: If you wanna be succesful then study successes.</li>
+
+<li>Front-End Frameworks: I’m still scratching the surface here. I started looking into the ember and ember data docs and really appreciated how well implemented the observer pattern (discussed in JS patterns) was used to create awesome functionality like:</li>
+</ul>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>fullName</span><span class='o'>:</span> <span class='kd'>function</span><span class='p'>()</span> <span class='p'>{</span>
+    <span class='k'>return</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>get</span><span class='p'>(</span><span class='s1'>&#39;firstName&#39;</span><span class='p'>)</span> <span class='o'>+</span> <span class='s1'>&#39; &#39;</span> <span class='o'>+</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>get</span><span class='p'>(</span><span class='s1'>&#39;lastName&#39;</span><span class='p'>);</span>
+  <span class='p'>}.</span><span class='nx'>property</span><span class='p'>(</span><span class='s1'>&#39;firstName&#39;</span><span class='p'>,</span> <span class='s1'>&#39;lastName&#39;</span><span class='p'>)</span>
+<span class='p'>});</span>
+</code></pre></div>
 <p>Ember Data also feels like a node brainchild where a data store (data cached into the browser) does not need to be aware of how an adapter actually gets data whether its a server DB call or external API call. This article goes over some of the stuff I liked in more detail http://www.smashingmagazine.com/2013/11/07/an-in-depth-introduction-to-ember-js/</p>
 
 <p>The naming convention also affords a lot of advantages since it makes it easy to go through online code examples. I haven’t necessarily settled for Ember, I’m also looking into Angular which at a first glance seemed pretty complicated but I’m not one to judge the quality of a framework after going through a tutorial. DAE HASKAL FOR WEBSCALE?</p>
-
     </div>
     <div class="span4">
         <h3>About me</h3>
