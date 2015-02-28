@@ -41,6 +41,7 @@ The question is meaningful becomes if the length of the string is sufficiently l
 Fortunately we also have a method of quantifying how random a length \\(n \\) bitstring is: Kolmogorov Complexity!
 
 #### A brief fugue into Kolmogorov Complexity
+
 Suppose you're given two strings:
 
 * \\(A = 01 01 01 01 01 01 01 \\) 
@@ -66,7 +67,7 @@ The proof of the weak law of large numbers is then concluded using Chebyshev's i
 
 \\(P(\|A\_n - \mu \| \geq \epsilon) \leq Var[A\_n]/ \sigma^2 = \frac{\sigma^2}{n \epsilon^2}  \\)
 
-Where is the measure theory you may ask? Well it's hidden in the proof of Chebyshev's inequality whose proof generally goes something like:
+Where is the measure theory you may ask? Well it's hidden in the proof of Chebyshev's inequality.
 
 ### Bounded Fair Coin Game
 
