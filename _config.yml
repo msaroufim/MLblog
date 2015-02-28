@@ -13,9 +13,9 @@ pages_list:
   #Github
 
 comments :
-    provider : disqus
-    disqus :
-      short_name : marksaro
+  provider : disqus
+  disqus :
+    short_name : marksaro
   # livefyre :
   #   site_id : 123
   # intensedebate :
