@@ -12,10 +12,10 @@ pages_list:
   #LinkedIn/CV
   #Github
 
-comments : true
-  # provider : disqus
-  # disqus :
-  #   short_name : marksaroufim
+comments :
+    provider : disqus
+    disqus :
+      short_name : marksaro
   # livefyre :
   #   site_id : 123
   # intensedebate :
