@@ -1,6 +1,7 @@
 ---
 title: Probability without measure theory
 layout: default
+comments: true
 ---
 
 ## What does it mean to say \\(P(event) = something \\)
@@ -39,7 +40,7 @@ The question is meaningful becomes if the length of the string is sufficiently l
 
 Fortunately we also have a method of quantifying how random a length \\(n \\) bitstring is: Kolmogorov Complexity!
 
-#### A brief fugue into Kolmogorov Complexity
+### A brief fugue into Kolmogorov Complexity
 
 Suppose you're given two strings:
 
@@ -66,7 +67,6 @@ The proof of the weak law of large numbers is then concluded using Chebyshev's i
 
 \\(P(\|A\_n - \mu \| \geq \epsilon) \leq Var[A\_n]/ \sigma^2 = \frac{\sigma^2}{n \epsilon^2}  \\)
 
-Where is the measure theory you may ask? Well it's hidden in the proof of Chebyshev's inequality.
 
 ### Bounded Fair Coin Game
 
@@ -98,11 +98,13 @@ Everytime an author proposes new definitions, I find it helpful to understand wh
 
 The condition after the "or" states that the skeptic wins if he becomes infinitely rich and I'm sure we can all agree that the constitutes a reasonable definition of winning. 
 
-The first needs some more clarification it states that if the outcome of the game is truly random then the skeptic wins, what is meant here is that if nature plays a completely random strategy then no winning strategy exists so the skeptic can't possibly play better than any other skeptic in retrospect. Trying to predict the stock price of a good that behaves arbitrarily is not. 
+The first needs some more clarification it states that if the outcome of the game is truly random then the skeptic wins, what is meant here is that if nature plays a completely arbitrary strategy then no winning strategy exists. Which is another way of saying that any given skeptic can't possibly play better than any other skeptic in retrospect. 
 
 Note how I use the term arbitrarily instead of the term randomly, this distinction seems pendantic but is quite important. Since randomly means according to some distribution while arbitrarily means there is absolutely no limitation to how a random variable may act. 
 
-Now let's outline a sketch of how we will prove that there exists a winning strategy for the skeptic. If the skeptic bets an infinitely small amount \\(\epsilon \\) on heads then nature will be forced to not play heads often or else the skeptic will become infinitely rich. Therefore nature will start playing tails, when that happens the skeptic .
+###Proving the bounded fair coin game
+
+Now for the proof: If the skeptic bets an infinitely small amount \\(\epsilon \\) on heads then nature will be forced to not play heads often or else the skeptic will become infinitely rich. Therefore nature will start playing tails, when that happens the skeptic starts playing tails. Essentially this almost silly example provides a proof of concept for machine learning: If nature's strategy is not completely arbitrary then nature's strategy has an underlying strategy that can be learnt from data! 
 
 TLDR: If nature's strategy is not completely uniform, meaning if nature does not play heads as often as tails then the skeptic can learn nature's strategy and become infinitely rich by playing an infinite number of rounds.
 

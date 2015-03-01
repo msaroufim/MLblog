@@ -1,6 +1,7 @@
 ---
 title: Why Sci-Fi might not be so good at predicting the future
 layout: default
+comments: true
 ---
 ## Asimov's Foundation
 
