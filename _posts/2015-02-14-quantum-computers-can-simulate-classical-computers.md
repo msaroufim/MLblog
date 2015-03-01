@@ -66,15 +66,12 @@ Now let's take a look at the truth table for a basic quantum gate the Toffoli ga
 
 |IN1  |IN2  |IN3  |OUT1  |OUT2  |OUT3  |
 |:---:|:---:|:---:|:----:|:----:|:----:|
-|0    |0    |0    |0     |0     |0     | 
-|0	  |0    |1    |0     |0     |1     |
-|0	  |1    |0    |0     |1     |0     |
-|0	  |1    |1    |0     |1     |1     |
-|1	  |0    |0    |1     |0     |0     |
-|1	  |0    |1    |1     |0     |1     |
-|1	  |1    |0    |1     |1     |1     |
-|1	  |1    |1    |1     |1     |0     |
-
+|0    |0    |0    |0     |0     |0      
+|0    |1    |1    |0     |1     |1     
+|1    |0    |0    |1     |0     |0     
+|1    |0    |1    |1     |0     |1     
+|1    |1    |0    |1     |1     |1     
+|1    |1    |1    |1     |1     |0     
 
 
 Now inspect the third output in the rows for which the third input is 1. Do those rows look familiar? They should! Because they correspond exactly to the NAND gate! So we can fix the third input bit of a Toffoli gate to 1 to simulate a NAND gate. Therefore we can simulate any NAND circuit or any boolean circuit using Toffoli gates.
