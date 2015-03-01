@@ -25,7 +25,6 @@ P(event) = how much money you're willing to spend on a game where you could win 
 
 The above definition is indeed intuitive but it hardly seems inline with what we'd imagine a mathematical definition of probability would look like.
 
-#### Kolmogorov's 6 axioms
 
 Kolmogorov rigorously formalized probability theory using just 6 axioms; what was previously a subfield of mathematical physics became its own deep topic. I might need a whole other blog post on Kolmogorov's 6 axioms but I'll mention one small but interesting thing here. The sixth axiom uses what is called the axiom of choice. The axiom of choice is . For our purposes though it would be interesting to explore the possibility of a different foundation to probability theory in games instead of measure theory.
 

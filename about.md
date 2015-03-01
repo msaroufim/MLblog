@@ -2,13 +2,6 @@
 layout: default
 title: About
 ---
-## Serious Work Stuff
-
-If you're here and interested to learn more about my work in industry or academia, I'd recommend you follow the links to the left on the navigation bar.
-
-## Standup Comedy
-
-I took a wonderful class at the University of Washington with Peter Greyy (Yes two y's) on standup comedy, we met for 3 sessions then had to perform in front of a live audience at the comedy underground in Seattle. You can chekout the video in navigation bar, it's a 3min video whose material took me about 20h worth of work. I would love to do more but I've been pretty swamped with learning web development.
 
 ## What I've been up to with Web Development
 
@@ -58,6 +51,6 @@ fullName: function() {
 });
 {% endhighlight %}
 
-Ember Data also feels like a node brainchild where a data store (data cached into the browser) does not need to be aware of how an adapter actually gets data whether its a server DB call or external API call. This article goes over some of the stuff I liked in more detail http://www.smashingmagazine.com/2013/11/07/an-in-depth-introduction-to-ember-js/
+Ember Data also feels like a node brainchild where a data store (data cached into the browser) does not need to be aware of how an adapter actually gets data whether its a server DB call or external API call. [This article](http://www.smashingmagazine.com/2013/11/07/an-in-depth-introduction-to-ember-js/) goes over some of the stuff I liked in more detail 
 
 The naming convention also affords a lot of advantages since it makes it easy to go through online code examples. I haven't necessarily settled for Ember, I'm also looking into Angular which at a first glance seemed pretty complicated but I'm not one to judge the quality of a framework after going through a tutorial. DAE HASKAL FOR WEBSCALE?
