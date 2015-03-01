@@ -2,7 +2,7 @@
 title: First Post
 layout: default
 ---
-# Math, Machine Learning & Programming fugues (Obviously not design)
+# Math, Machine Learning & Programming fugues
 
 
 
