@@ -47,10 +47,13 @@ This is a neat result that I proved in the introductory lecture of the seminar, 
 
 Let's take a look at the truth table of a NAND gate where the first two columns represent the two inputs and the last colum presents the output.
 
-<!-- ![ScreenShot](http://www.zseries.in/electronics%20lab/ics/pictures/truth%20table%20of%20ic7400.png)
- -->
 
-|---|---|-----------|
+<!-- <img src="http://www.zseries.in/electronics%20lab/ics/pictures/truth%20table%20of%20ic7400.png" alt="Drawing" style="width: 100px; height="50px" "/> -->
+
+
+
+|IN1|IN2|OUT        |
+|:---:|:---:|:-----------:|
 |0  |0  |1          |
 |0  |1  |1          |
 |1  |0  |1          |
@@ -60,15 +63,16 @@ Let's take a look at the truth table of a NAND gate where the first two columns 
 Now let's take a look at the truth table for a basic quantum gate the Toffoli gate. A Toffoli gate takes in three inputs and produces three outputs.
 
 
-|---|---|---|----|----|----|
-|0  |0| 0|  |0| |0| |0| 
-|0	|0|	1|	|0|	|0|	|1|
-|0	|1|	0|	|0|	|1|	|0|
-|0	|1|	1|	|0|	|1|	|1|
-|1	|0|	0|	|1|	|0|	|0|
-|1	|0|	1|	|1|	|0|	|1|
-|1	|1|	0|	|1|	|1|	|1|
-|1	|1|	1|	|1|	|1|	|0|
+|IN1  |IN2  |IN3  |OUT1  |OUT2  |OUT3  |
+|:---:|:---:|:---:|:----:|:----:|:----:|
+|0    |0    |0    |0     |0     |0     | 
+|0	  |0    |1    |0     |0     |1     |
+|0	  |1    |0    |0     |1     |0     |
+|0	  |1    |1    |0     |1     |1     |
+|1	  |0    |0    |1     |0     |0     |
+|1	  |0    |1    |1     |0     |1     |
+|1	  |1    |0    |1     |1     |1     |
+|1	  |1    |1    |1     |1     |0     |
 
 
 
@@ -107,7 +111,7 @@ This doesn't seem like a lot but it is quite significant! Think of how you'd sim
 
 ## Epilogue
 
-Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover's search algorithm and Shor's factoring algorithm. If you can't wait then I'd highly recommend Chapter in 10. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I'd recommend you check out the [ topics](http://www.cse.ucsd.edu/theory_reading_group/) we had in theory reading group at UCSD.  
+Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover's search algorithm and Shor's factoring algorithm. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I'd recommend you check out the [ topics](http://www.cse.ucsd.edu/theory_reading_group/) we had in theory reading group at UCSD.  
 
  The two big open questions are perhaps: can quantum computers actually be built? If they can, can they solve more problems than classical computers? The complexity theory community seems to think so. As Aaronson would say: all possibilities are equally intriguing since either we learn some pretty fundamental limitations of phyics or we get swanky new quantum computers.
 

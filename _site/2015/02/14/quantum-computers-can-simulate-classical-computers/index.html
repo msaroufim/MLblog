@@ -132,14 +132,22 @@ trying an external reference now, should be careful if image ever disappers it m
 <h3 id="proving_that_quantum_computers_are_at_least_as_powerful_as_classical_computers_using_truth_tables">Proving that quantum computers are at least as powerful as classical computers using truth tables</h3>
 
 <p>Let’s take a look at the truth table of a NAND gate where the first two columns represent the two inputs and the last colum presents the output.</p>
-<!-- ![ScreenShot](http://www.zseries.in/electronics%20lab/ics/pictures/truth%20table%20of%20ic7400.png)
- -->
-<p>|—|—|———–| |0 |0 |1 | |0 |1 |1 | |1 |0 |1 | |1 |1 |0 |</p>
-
+<!-- <img src="http://www.zseries.in/electronics%20lab/ics/pictures/truth%20table%20of%20ic7400.png" alt="Drawing" style="width: 100px; height="50px" "/> --><table><thead><tr><th>IN1</th><th>IN2</th><th>OUT</th></tr></thead><tbody><tr><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td></tr>
+<tr><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td style="text-align: center;">1</td></tr>
+<tr><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td></tr>
+<tr><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td></tr>
+</tbody></table>
 <p>Now let’s take a look at the truth table for a basic quantum gate the Toffoli gate. A Toffoli gate takes in three inputs and produces three outputs.</p>
-
-<p>|—|—|—|—-|—-|—-| |0 |0| 0| |0| |0| |0| |0 |0| 1| |0| |0| |1| |0 |1| 0| |0| |1| |0| |0 |1| 1| |0| |1| |1| |1 |0| 0| |1| |0| |0| |1 |0| 1| |1| |0| |1| |1 |1| 0| |1| |1| |1| |1 |1| 1| |1| |1| |0|</p>
-
+<table><thead><tr><th>IN1</th><th>IN2</th><th>IN3</th><th>OUT1</th><th>OUT2</th><th>OUT3</th></tr></thead><tbody><tr><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td></tr>
+<tr><td style="text-align: center;"></td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td></tr>
+<tr><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td></tr>
+<tr><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td></tr>
+<tr><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td></tr>
+<tr><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td></tr>
+<tr><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td style="text-align: center;">1</td></tr>
+<tr><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">1</td><td style="text-align: center;">1</td></tr>
+<tr><td style="text-align: center;">0</td></tr>
+</tbody></table>
 <p>Now inspect the third output in the rows for which the third input is 1. Do those rows look familiar? They should! Because they correspond exactly to the NAND gate! So we can fix the third input bit of a Toffoli gate to 1 to simulate a NAND gate. Therefore we can simulate any NAND circuit or any boolean circuit using Toffoli gates.</p>
 
 <h2 id="are_computers_more_powerful_if_they_are_allowed_to_make_coin_flips">Are computers more powerful if they are allowed to make coin flips?</h2>
@@ -188,7 +196,7 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <h2 id="epilogue">Epilogue</h2>
 
-<p>Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover’s search algorithm and Shor’s factoring algorithm. If you can’t wait then I’d highly recommend Chapter in 10. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I’d recommend you check out the <a href="http://www.cse.ucsd.edu/theory_reading_group/">topics</a> we had in theory reading group at UCSD.</p>
+<p>Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover’s search algorithm and Shor’s factoring algorithm. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I’d recommend you check out the <a href="http://www.cse.ucsd.edu/theory_reading_group/">topics</a> we had in theory reading group at UCSD.</p>
 
 <p>The two big open questions are perhaps: can quantum computers actually be built? If they can, can they solve more problems than classical computers? The complexity theory community seems to think so. As Aaronson would say: all possibilities are equally intriguing since either we learn some pretty fundamental limitations of phyics or we get swanky new quantum computers.</p>
 <!-- http://cseweb.ucsd.edu/~dasgupta/book/index.html>Chapter 10 -->

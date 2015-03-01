@@ -20,7 +20,7 @@ This definition seems fairly intuitive because we can actually attribute a meani
 
 
 
-P(event) = how much money you're willing to spend on a game where you could win 1$.
+>P(event) = how much money you're willing to spend on a game where you could win 1$.
 
 ### Mathematization of Probability Theory
 
@@ -106,7 +106,7 @@ Note how I use the term arbitrarily instead of the term randomly, this distincti
 
 Now for the proof: If the skeptic bets an infinitely small amount \\(\epsilon \\) on heads then nature will be forced to not play heads often or else the skeptic will become infinitely rich. Therefore nature will start playing tails, when that happens the skeptic starts playing tails. Essentially this almost silly example provides a proof of concept for machine learning: If nature's strategy is not completely arbitrary then nature's strategy has an underlying strategy that can be learnt from data! 
 
-TLDR: If nature's strategy is not completely uniform, meaning if nature does not play heads as often as tails then the skeptic can learn nature's strategy and become infinitely rich by playing an infinite number of rounds.
+> TLDR: If nature's strategy is not completely uniform, meaning if nature does not play heads as often as tails then the skeptic can learn nature's strategy and become infinitely rich by playing an infinite number of rounds.
 
 And that's the proof of the weak law of large numbers! We can think of nature as an entity trying to minimize rare events: that's why there aren't that many infinitely rich folks out there! (Actually the real proof is slightly more complicated and is covered in my original [tutorial](https://www.dropbox.com/s/zwio6k94ix40q1s/ItsOnlyAGame.pdf)
 
