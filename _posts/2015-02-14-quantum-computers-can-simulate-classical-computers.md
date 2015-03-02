@@ -102,9 +102,10 @@ Why does this work? Well, if for any \\(x\\), \\(P_1(x) != P_2(x)\\) then they a
 
 First we're going to have to define what a quantum bit is. We represent an arbitrary quantum bit \\(a\\) as \\( \| a > = \alpha \| 0 > + \beta \| 1 > \\)
 
-The above definition is read as a quantum bit \\(a\\) is in state 0 with probability \\(\alpha^2\\) and in state 1 with probability \\(\beta^2\\). When people talk about how a quantum bit can be both 1 and 0 at the same time they are refering to the above expression yet they are incorrectly interpreting it. There is nothing weird, magical or massively paralell about a distribution over two variables. Next we note that any gate whether its quantum or not can be represented algebraically. 
+The above definition is read as a quantum bit \\(a\\) is in state 0 with probability \\(\alpha^2\\) and in state 1 with probability \\(\beta^2\\). When people talk about how a quantum bit can be both 1 and 0 at the same time they are refering to the above expression yet they are incorrectly interpreting it. There is nothing weird, magical or massively parallel about a distribution over two variables. 
 
-e.g: \\(A \wedge B = A . B \\)
+To continue, we note that that any logical operation can be represented algebraically, for instance: \\(A \wedge B = A . B \\).
+
 
 We will use, the basic quantum Hadamard Gate. \\(H = \frac{1}{\sqrt{2}}   \begin{bmatrix}1 & 1  ; 1 & -1 \end{bmatrix} \\). We then apply the Hadamard gate on a \\(\|0>\\) bit:
 
