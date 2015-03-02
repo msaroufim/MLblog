@@ -31,11 +31,11 @@ Since the beginning of February, I've been trying to flex some web development m
 
 {% highlight javascript %}
 function inherit(C, P) {
-var F = function () {};
- F.prototype = P.prototype;
- C.prototype = new F();
- C.uber = P.prototype;
- C.prototype.constructor = C;
+    var F = function () {};
+    F.prototype = P.prototype;
+    C.prototype = new F();
+    C.uber = P.prototype;
+    C.prototype.constructor = C;
 }
 
 {% endhighlight %}

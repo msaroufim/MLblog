@@ -123,11 +123,11 @@ trying an external reference now, should be careful if image ever disappers it m
 <li>JS Patterns: This book made me understand why people hate on JS so much. I probably need to go over the code reuse chapter again. The objective is for me to understand how to come up with the below snippet from the perspective of someone who has never seen it.</li>
 </ul>
 <div class='highlight'><pre><code class='javascript'><span class='kd'>function</span> <span class='nx'>inherit</span><span class='p'>(</span><span class='nx'>C</span><span class='p'>,</span> <span class='nx'>P</span><span class='p'>)</span> <span class='p'>{</span>
-<span class='kd'>var</span> <span class='nx'>F</span> <span class='o'>=</span> <span class='kd'>function</span> <span class='p'>()</span> <span class='p'>{};</span>
- <span class='nx'>F</span><span class='p'>.</span><span class='nx'>prototype</span> <span class='o'>=</span> <span class='nx'>P</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>;</span>
- <span class='nx'>C</span><span class='p'>.</span><span class='nx'>prototype</span> <span class='o'>=</span> <span class='k'>new</span> <span class='nx'>F</span><span class='p'>();</span>
- <span class='nx'>C</span><span class='p'>.</span><span class='nx'>uber</span> <span class='o'>=</span> <span class='nx'>P</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>;</span>
- <span class='nx'>C</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>.</span><span class='nx'>constructor</span> <span class='o'>=</span> <span class='nx'>C</span><span class='p'>;</span>
+    <span class='kd'>var</span> <span class='nx'>F</span> <span class='o'>=</span> <span class='kd'>function</span> <span class='p'>()</span> <span class='p'>{};</span>
+    <span class='nx'>F</span><span class='p'>.</span><span class='nx'>prototype</span> <span class='o'>=</span> <span class='nx'>P</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>;</span>
+    <span class='nx'>C</span><span class='p'>.</span><span class='nx'>prototype</span> <span class='o'>=</span> <span class='k'>new</span> <span class='nx'>F</span><span class='p'>();</span>
+    <span class='nx'>C</span><span class='p'>.</span><span class='nx'>uber</span> <span class='o'>=</span> <span class='nx'>P</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>;</span>
+    <span class='nx'>C</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>.</span><span class='nx'>constructor</span> <span class='o'>=</span> <span class='nx'>C</span><span class='p'>;</span>
 <span class='p'>}</span>
 </code></pre></div>
 <ul>
