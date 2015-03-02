@@ -189,7 +189,13 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <p>e.g: \(A \wedge B = A . B \)</p>
 
-<p>We will use, the basic quantum Hadamard Gate. \(H = \frac{1}{\sqrt{2}} \) \(\begin{bmatrix}1 &amp; 1\) \(1 &amp; -1 \end{bmatrix}\). We then apply \(H |0&gt; = \frac{1}{\sqrt{2}}|0&gt; + \frac{1}{\sqrt{2}}|1&gt; \) which when measured gives us either 0 or 1 with probability 1/2 and we’re done.</p>
+<p>We will use, the basic quantum Hadamard Gate. \(H = \frac{1}{\sqrt{2}} \begin{bmatrix}1 &amp; 1 ; 1 &amp; -1 \end{bmatrix} \). We then apply the Hadamard gate on a \(|0&gt;\) bit:</p>
+
+<p>\(H |0&gt; = \frac{1}{\sqrt{2}}|0&gt; + \frac{1}{\sqrt{2}}|1&gt; \) which when measured gives us either 0 or 1 with probability 1/2.</p>
+
+<blockquote>
+<p>In other words using a Hadamard gate allows us to simulate a fair coin</p>
+</blockquote>
 
 <p>This doesn’t seem like a lot but it is quite significant! Think of how you’d simulate a uniform distribution over \(n \) variables using a uniform distribution over 2 variables. Also related, I hear simulating a fair coin using an unbiased coin is a popular interview question. Another natural question to think about is then how would you simulate a biased coin using an unbiased one?</p>
 

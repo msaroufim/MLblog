@@ -106,7 +106,11 @@ The above definition is read as a quantum bit \\(a\\) is in state 0 with probabi
 
 e.g: \\(A \wedge B = A . B \\)
 
-We will use, the basic quantum Hadamard Gate. \\(H = \frac{1}{\sqrt{2}} \\) \\(\begin{bmatrix}1 & 1\\) \\(1 & -1 \end{bmatrix}\\). We then apply \\(H \|0> = \frac{1}{\sqrt{2}}\|0> + \frac{1}{\sqrt{2}}\|1> \\) which when measured gives us either 0 or 1 with probability 1/2 and we're done. 
+We will use, the basic quantum Hadamard Gate. \\(H = \frac{1}{\sqrt{2}}   \begin{bmatrix}1 & 1  ; 1 & -1 \end{bmatrix} \\). We then apply the Hadamard gate on a \\(\|0>\\) bit:
+
+\\(H \|0> = \frac{1}{\sqrt{2}}\|0> + \frac{1}{\sqrt{2}}\|1> \\) which when measured gives us either 0 or 1 with probability 1/2. 
+
+> In other words using a Hadamard gate allows us to simulate a fair coin
 
 This doesn't seem like a lot but it is quite significant! Think of how you'd simulate a uniform distribution over \\(n \\) variables using a uniform distribution over 2 variables. Also related, I hear simulating a fair coin using an unbiased coin is a popular interview question. Another natural question to think about is then how would you simulate a biased coin using an unbiased one?
 
