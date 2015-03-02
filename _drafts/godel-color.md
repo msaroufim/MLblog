@@ -4,10 +4,12 @@ layout: default
 comments: true
 ---
 
-## Color Theory and Theory of Computation
+## Color Theory and The Theory of Computation
 
 
-Over the past few months I've been trying to train my eye to appreciate better design. People tend to find better designed blogs to be more trustworthy. While content is king, looks matter too. 
+Over the past few months I've been trying to train my eye to appreciate better design. People tend to find better designed blogs to be more trustworthy. Although while content is king, looks matter too. So I know it will be worthwhile for me to learn more about design but that's not stopping me from wanting to contribute some theoretical computer science to design.
+
+### The fundamental theorem of color engineering
 
 My brief foray into design has led me to find this commonly held belief in the design community.
 

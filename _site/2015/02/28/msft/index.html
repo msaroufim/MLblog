@@ -94,35 +94,35 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <div class="row-fluid">
     <div class="span8">
-        <h2 id="asimovs_foundation">Asimov’s Foundation</h2>
+        <h3 id="binging_it">Binging it</h3>
 
-<p>I recently just finished Asimov’s fourth Foundation Book: Foundation and Edge. The series is excellent and I wholeheartedly recommend it to any sci-fi fans. The empire is about to fall into 30000 years of darkness when Hari Seldon Mathematician/Prophet establishes a Foundation of scholars to document all of human knowledge as part of a complicated 1000 year plan to establish a stronger second empire.</p>
+<p>I’m not sure where this stereotype came from but apparently many people outside of Microsoft believe that Bing employees are deathly afraid of uttering the words: “I googled it”. If ever someone would ever dare commit such a gaffe then the ghost of Steve Ballmer would take away your employee badge and ban you from ever entering Washington State again! In fact, nothing could be further from the truth, our engineering culture means that we don’t spend all day bickering about the correct nomenclature of verbs pertaining to “search on the internet” and instead spend it on building tools that our clients care about. I’ll give an example that some friends have found a bit surprising that illustrates that point.</p>
 
-<p>The first novel of the series was written in 1942 and it should be extremely curious for modern readers to note that an entire planet was needed to document all of human knowledge. In fact Wikipedia has provided such a documentation by instead crowdsourcing the entire process and had it more or less completed in a decade.</p>
+<h3 id="a_case_study">A case study</h3>
 
-<h2 id="interpolation_as_a_predictor">Interpolation as a predictor</h2>
+<p>A few months ago, Bing Ads launched what is now known as Universal Event Tracking. It’s essentially an offering with features similar to Google Analytics + Google Remarketing. The TLDR of it is: you put some tracking script on your webpage that lets you analyze the behavior of your webpage’s users.</p>
 
-<p>Breakthroughs might not happen on problems we deem important today, but instead refine current technologies to enable other kinds of breakthroughs In the Foundation even though the protagonists are in the distant future where mankind has colonized into the far reaches of the universe, mankind still communicates via letters. I believe that for an author in 1942 paper and a complex system of inter-spatial tubes might have never looked like an improper medium to communicate information but the complexity and cost of such a system dwarves the internet. So ask an author in 2014: how would people communicate in the future and odds are they’ll imagine something like people sitting on ergonomic chairs typing away on their paper thin tablets transmitting information wirelessly. The infrastructure might include satellites operating as routing stations transmitting Wi-fi signals through space.</p>
+<h4 id="the_problem">The problem</h4>
 
-<blockquote>
-<p>The problem is that any attempt to imagine what future technologies will look like will attempt to do so via analogy to technologies we use today.</p>
-</blockquote>
+<p>We had a bunch of escalations from support where advertisers were complaining that the tag wasn’t doing what they expected it to do. There were definitely two themes to the questions.</p>
 
-<p>We’ve made breakthroughs in the speed at which we can transmit information but yet we haven’t made substantial progress in finding other planets we could colonize. Yes we do have Philae on the Rosetta comet and Curiosity on Mars yet we still don’t have affordable spacecraft or space-travel, we don’t know how to travel through wormholes and maybe fundamentally we can’t.</p>
+<ul>
+<li>Where do I put my tag?</li>
 
-<h3 id="neuroscience_fugue">Neuroscience fugue</h3>
+<li>After I put place the tag on my page, how do I know if it is working correctly?</li>
+</ul>
 
-<p>Neuroscientists face a similar problem where the tools they are working with makes them incapable of making any great strides to understand the human brain. There are no instruments that can measure the various concentrations of neurotransmitters on a subject who is alive, we have no instruments to map specific neural level activity with cognition. However, because we believe that the brain is essentially a computer with hundreds of billions of components we call neurons then there should be no fundamental reason why we can’t understand them by analogy to computers.</p>
+<h4 id="the_solution">The solution</h4>
 
-<blockquote>
-<p>I propose that maybe we are facing an instance of reasoning via a false analogy, maybe a computer is the wrong abstraction for the brain.</p>
-</blockquote>
+<p>The solution to the first problem was just to create a reference web page that shows a webpage correctly instrumented with the UET tag. I had already a few days before learnt how to serve a static html page using node so that’s what I used. I queried for “node webapp hosting ” and clicked on heroku. Set up my config files and had my super simple reference page up and ready within a few minutes. (Un)?Surprisingly nobody cared that I didn’t write a dot net app and hosted it on Azure, in fact it would have been ridiculous for anybody to bring this up. Every engineer uses the tools that he’s comfortable with, if those tools help him bring value to customers quicker then that’s the technology stack he should go with.</p>
 
-<p>When Descartes took to studying the brain, he also used the analogy that made the most sense at the time. He imagined the brain as a complex hydraulic engine that moves the body or creates thoughts via a fluidic pressure on different parts of the brain. The center of decision making would be the Pineal Gland (Last I checked people still don’t know what a Pineal Gland does).</p>
+<p>The solution to the second problem was to create some sort of extension that could read through a customer’s webpage and tell whether the UET tag was correctly instrumented. I never had much experience writing browser extensions but again I just looked up online my alternatives. The top ranking results were Firefox and Chrome, I skimmed through the documentation and found the Chrome docs to be easier to start with so I went with that. So now a tool that a lot of folks in support are using is this simple chrome extension.</p>
 
-<h2 id="epilogue">Epilogue</h2>
+<p>The chrome extension is very simple, the core logic is 4 lines of javascript that tells whether a certain global object has a particular attribute and then uses that to send the user an alert as to whether their tag is correctly configured.</p>
 
-<p>So really the lesson is: any prediction we might make about the future is still an extrapolation of what we observe in the present. Asimov and Descartes were doomed to think via false analogies. Asimov failed to predict what technology would look like 40 years after he published the first Foundation and Descartes’ story reminds us how foolish we will look in retrospect for reasoning via incorrect abstractions.</p>
+<h3 id="epilogue">Epilogue</h3>
+
+<p>There is no question that this kind of culture has been made possible by Satya, I hear that the above might have been difficult to achieve about a year ago. However, the culture has shifted from a product obsessed one to a customer obsessed one and I don’t anybody is going to look back at this decision with any regret</p>
     </div>
     <div class="span4">
         <h3>About me</h3>
@@ -146,22 +146,7 @@ trying an external reference now, should be careful if image ever disappers it m
     </div>
 </div>
 
-<!--  
- <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'marksaroufim'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
- -->
+<!--   -->
 
 
     </div>
@@ -172,22 +157,6 @@ trying an external reference now, should be careful if image ever disappers it m
 
 
 
-<!-- Add Disqus comments. -->
-<div id="disqus_thread" class="comments"></div>
-<script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-  var disqus_shortname = 'marksaro'; // required: replace example with your forum shortname
-  var disqus_identifier = "/2014/11/15/scifi-and-predicting-the-future/";
-
-  /* * * DON'T EDIT BELOW THIS LINE * * */
-  (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
-
 
   </body>
 </html>
@@ -196,7 +165,7 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <!-- <div id=twitter>
 If you liked this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/2014/11/15/scifi-and-predicting-the-future/&text=Why Sci-Fi might not be so good at predicting the future&via=MarkSaroufim" 
+<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/2015/02/28/msft/&text=Using Non Microsoft Tools at the New Microsoft&via=MarkSaroufim" 
    target="_blank">
   share it with your followers</a> 
 or 
