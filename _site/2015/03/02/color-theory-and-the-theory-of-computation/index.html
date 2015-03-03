@@ -94,35 +94,57 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <div class="row-fluid">
     <div class="span8">
-        <h3 id="binging_it">Binging it</h3>
+        <h2 id="color_theory_and_the_theory_of_computation">Color Theory and The Theory of Computation</h2>
 
-<p>I’m not sure where this stereotype came from but apparently many people outside of Microsoft believe that Bing employees are deathly afraid of uttering the words: “I googled it”. If ever someone would ever dare commit such a gaffe then the ghost of Steve Ballmer would take away your employee badge and ban you from ever entering Washington State again! In fact, nothing could be further from the truth, our engineering culture means that we don’t spend all day bickering about the correct nomenclature of verbs pertaining to “search on the internet” and instead spend it on building tools that our clients care about. I’ll give an example that some friends have found a bit surprising that illustrates that point.</p>
+<p>Over the past few months I’ve been trying to train my eye to appreciate better design. People tend to find better designed blogs to be more trustworthy. While content is king, looks matter too. So I know it will be worthwhile for me to learn more about design. Today I decided to explore the topic of color theory.</p>
 
-<h3 id="a_case_study">A case study</h3>
+<h3 id="the_fundamental_theorem_of_color_engineering">The fundamental theorem of color engineering</h3>
 
-<p>A few months ago, Bing Ads launched what is now known as Universal Event Tracking. It’s essentially an offering with features similar to Google Analytics + Google Remarketing. The TLDR of it is: you put some tracking script on your webpage that lets you analyze the behavior of your webpage’s users.</p>
+<p>My brief foray into design has led me to find this commonly held belief in the design community.</p>
 
-<h4 id="the_problem">The problem</h4>
+<blockquote>
+<p>“A device that is able to reproduce the entire visible color space is an unrealized goal within the engineering of color displays and printing processes”.</p>
+</blockquote>
 
-<p>We had a bunch of escalations from support where advertisers were complaining that the tag wasn’t doing what they expected it to do. There were definitely two themes to the questions.</p>
+<p>The above is directly pulled from Wikipedia. Usually I would not attach much thought to such a statement but its formulation reminded me pretty strongly of a type of statement that I’ve encountered in a theory of computation class I TA’d for back in UCSD.</p>
 
-<ul>
-<li>Where do I put my tag?</li>
+<p>For this blog post I will prove a stronger statement:</p>
 
-<li>After I put place the tag on my page, how do I know if it is working correctly?</li>
-</ul>
+<blockquote>
+<p>There cannot exist a device that can reproduce the entire visible color space.</p>
+</blockquote>
 
-<h4 id="the_solution">The solution</h4>
+<h3 id="the_godel_escher_and_bach_argument">The Godel, Escher and Bach argument</h3>
 
-<p>The solution to the first problem was just to create a reference web page that shows a webpage correctly instrumented with the UET tag. I had already a few days before learnt how to serve a static html page using node so that’s what I used. I queried for “node webapp hosting ” and clicked on heroku. Set up my config files and had my super simple reference page up and ready within a few minutes. (Un)?Surprisingly nobody cared that I didn’t write a dot net app and hosted it on Azure, in fact it would have been ridiculous for anybody to bring this up. Every engineer uses the tools that he’s comfortable with, if those tools help him bring value to customers quicker then that’s the technology stack he should go with.</p>
+<p>I will prove the above statement by reducing it to another statement which was proven to be true in the wonderful <a href="http://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567/ref=sr_1_1?ie=UTF8&qid=1425267550&sr=8-1&keywords=godel+escher+and+bach">Godel, Escher and Bach</a></p>
 
-<p>The solution to the second problem was to create some sort of extension that could read through a customer’s webpage and tell whether the UET tag was correctly instrumented. I never had much experience writing browser extensions but again I just looked up online my alternatives. The top ranking results were Firefox and Chrome, I skimmed through the documentation and found the Chrome docs to be easier to start with so I went with that. So now a tool that a lot of folks in support are using is this simple chrome extension.</p>
+<blockquote>
+<p>There cannot exist a gramophone that can play any disk</p>
+</blockquote>
 
-<p>The chrome extension is very simple, the core logic is 4 lines of javascript that tells whether a certain global object has a particular attribute and then uses that to send the user an alert as to whether their tag is correctly configured.</p>
+<p>Hofstatder lays out a thought experiment where he discusses whether a gramophone that can play any disk could exist in principle. Hofstatder’s argument is an intriguing one. He makes a claim that given such a perfect gramophone he would inspect its inner workings and construct a disk such that when that disk is played, its creases which would typically produce vibrations in the air to create sound, would instead produce vibrations that oscillate at the disk’s resonant frequency, causing the disk to break. Therefore, we’ve shown that for any gramophone there exits a disk that it cannot play. Or in other words, there exists no gramophone that can play any disk.</p>
+
+<h3 id="the_fundamental_theorem_of_color">The fundamental theorem of color</h3>
+
+<p>A printer operates in much the similar way: a printer recieves a digital encoding of all colors and positions they should occupy on a sheet of paper. Given the encoding, my idealized theoretical printer vibrates its needle to move to different locations on the page to bring about the miracle of color.</p>
+
+<p>Similarly to how Hofstatder exploited the property of resonant frequency to make a disk break, we know that there is a one to one mapping between the digital encoding that a printer receives and the displayed colors on an image. This means that given a handcrafted encoding we should in principle be able to manipulate the color needle of a printer in whatever way we wish. Therefore, there must exist at least one encoding that can force the printer to malfunction by making the needle vibrate uncontrollably. In other words, for any printer ever invented or to be invented in the distant future, there must exist a encoding of colors which the printer will not be able to print.</p>
 
 <h3 id="epilogue">Epilogue</h3>
 
-<p>There is no question that this kind of culture has been made possible by Satya, I hear that the above might have been difficult to achieve about a year ago. However, the culture has shifted from a product obsessed one to a customer obsessed one and I don’t anybody is going to look back at this decision with any regret</p>
+<p>With this we can finally conclude that:</p>
+
+<blockquote>
+<p>There cannot exist a device that can reproduce the entire visible color space.</p>
+</blockquote>
+
+<p>In fact we have illustrated something much more powerful:</p>
+
+<blockquote>
+<p>There cannot exist any device that can reproduce the entirety of any space.</p>
+</blockquote>
+
+<p>And here I leave you with one of the deepest truths uncovered in Mathematics, Gödel’s incompleteness theorem. I’ll prove Gödel’s incompleteness theorem in a formal but easy argument in my next blog post. What we will cover is specifically the process by which we inspect a printer or gramaphone to find the respective encodings of color and sound that would cause them to malfunction.</p>
     </div>
     <div class="span4">
         <h3>About me</h3>
@@ -146,7 +168,22 @@ trying an external reference now, should be careful if image ever disappers it m
     </div>
 </div>
 
-<!--   -->
+<!--  
+ <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'marksaroufim'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+ -->
 
 
     </div>
@@ -157,6 +194,22 @@ trying an external reference now, should be careful if image ever disappers it m
 
 
 
+<!-- Add Disqus comments. -->
+<div id="disqus_thread" class="comments"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'marksaro'; // required: replace example with your forum shortname
+  var disqus_identifier = "/2015/03/02/color-theory-and-the-theory-of-computation/";
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
 
   </body>
 </html>
@@ -165,7 +218,7 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <!-- <div id=twitter>
 If you liked this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/2015/02/28/msft/&text=Using Non Microsoft Tools at the New Microsoft&via=MarkSaroufim" 
+<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/2015/03/02/color-theory-and-the-theory-of-computation/&text=Color Theory and Theory of Computation&via=MarkSaroufim" 
    target="_blank">
   share it with your followers</a> 
 or 
