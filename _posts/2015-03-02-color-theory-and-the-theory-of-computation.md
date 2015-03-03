@@ -47,4 +47,4 @@ In fact we have illustrated something much more powerful:
 
 > There cannot exist any device that can reproduce the entirety of any space.
 
-And here I leave you with one of the deepest truths uncovered in Mathematics, Gödel's incompleteness theorem. I'll prove Gödel's incompleteness theorem in a formal but easy argument in my next blog post. What we will cover is specifically the process by which we inspect a printer or gramaphone to find the respective encodings of color and sound that would cause them to malfunction.
+And here I leave you with one of the deepest truths uncovered in Mathematics, Gödel's incompleteness theorem. I'll prove Gödel's incompleteness theorem in a formal but easy argument in my next blog post. What we will cover is specifically the process by which we inspect a printer or gramophone to find the respective encodings of color and sound that would cause them to malfunction.
