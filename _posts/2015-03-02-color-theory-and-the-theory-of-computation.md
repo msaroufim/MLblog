@@ -9,6 +9,8 @@ comments: true
 
 Over the past few months I've been trying to train my eye to appreciate better design. People tend to find better designed blogs to be more trustworthy. While content is king, looks matter too. So I know it will be worthwhile for me to learn more about design. Today I decided to explore the topic of color theory.
 
+**Disclaimer: The below is an informal argument that does not constitute a real mathematical proof, it's value is in providing some intuition behind diagonalization.**
+
 ### The fundamental theorem of color engineering
 
 My brief foray into design has led me to find this commonly held belief in the design community.
