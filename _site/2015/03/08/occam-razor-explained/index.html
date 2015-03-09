@@ -94,59 +94,63 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <div class="row-fluid">
     <div class="span8">
-        <h2 id="color_theory_and_the_theory_of_computation">Color Theory and The Theory of Computation</h2>
+        <h2 id="occams_razor">Occam’s Razor</h2>
 
-<p>Over the past few months I’ve been trying to train my eye to appreciate better design. People tend to find better designed blogs to be more trustworthy. While content is king, looks matter too. So I know it will be worthwhile for me to learn more about design. Today I decided to explore the topic of color theory.</p>
+<h3 id="truth_is_found_where_less_assumptions_are_made">Truth is found where less assumptions are made</h3>
 
-<p><strong>Disclaimer: The below is an informal argument that does not constitute a real mathematical proof, it’s value is in providing some intuition behind diagonalization.</strong></p>
-
-<h3 id="the_fundamental_theorem_of_color_engineering">The fundamental theorem of color engineering</h3>
-
-<p>My brief foray into design has led me to find this commonly held belief in the design community.</p>
+<p>One of the cornerstones of Machine Learning is Occam’s Razor. Essentially it’s a principle by which two competing hypotheses about the world may be compared according to their simplicity. An appropriate definition may be lifted off from Wikipedia:</p>
 
 <blockquote>
-<p>“A device that is able to reproduce the entire visible color space is an unrealized goal within the engineering of color displays and printing processes”.</p>
+<p>The principle states that among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected. Other, more complicated solutions may ultimately prove to provide better predictions, but—in the absence of differences in predictive ability—the fewer assumptions that are made, the better.</p>
 </blockquote>
 
-<p>The above is directly pulled from Wikipedia. Usually I would not attach much thought to such a statement but its formulation reminded me pretty strongly of a type of statement that I’ve encountered in a theory of computation class I TA’d for back in UCSD.</p>
+<p>The principle is indeed sensible but I always had a feeling that there must be some basic argument showing why it is indeed better to assume simpler hypothesis when possible. Therefore with what follows I’ll make a simple probabilistic argument that will hopefully show you why Occam’s Razor is indeed a good principle.</p>
 
-<p>For this blog post I will prove a stronger statement:</p>
+<h3 id="truth_is_found_in_likelihood">Truth is found in likelihood</h3>
 
-<blockquote>
-<p>There cannot exist a device that can reproduce the entire visible color space.</p>
-</blockquote>
+<p>Suppose I gave you a list of numbers \(D = \{ 16,32,4 \} \) and asked to what hypothesis class do these numbers belong to. In the absence of more information, many valid hypotheses could be formed. You could say:</p>
 
-<h3 id="the_godel_escher_and_bach_argument">The Godel, Escher and Bach argument</h3>
+<ul>
+<li>D belongs to the set containing even numbers</li>
 
-<p>I will prove the above statement by reducing it to another statement which was proven to be true in the wonderful <a href="http://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567/ref=sr_1_1?ie=UTF8&qid=1425267550&sr=8-1&keywords=godel+escher+and+bach">Godel, Escher and Bach</a></p>
+<li>D belongs to the set containing powers of two</li>
 
-<blockquote>
-<p>There cannot exist a gramophone that can play any disk</p>
-</blockquote>
+<li>D belongs to the set of powers of two under 50</li>
 
-<p>Hofstatder lays out a thought experiment where he discusses whether a gramophone that can play any disk could exist in principle. Hofstatder’s argument is an intriguing one. He makes a claim that given such a perfect gramophone he would inspect its inner workings and construct a disk such that when that disk is played, its creases which would typically produce vibrations in the air to create sound, would instead produce vibrations that oscillate at the disk’s resonant frequency, causing the disk to break. Therefore, we’ve shown that for any gramophone there exits a disk that it cannot play. Or in other words, there exists no gramophone that can play any disk.</p>
+<li>D belongs to the set of even number under 100</li>
+</ul>
 
-<h3 id="the_fundamental_theorem_of_color">The fundamental theorem of color</h3>
+<p>While there is seemingly no clear answer, we can do some back of the envelope mathematics to see which of these hypotheses is the most likely. The hypothesis that’s the most likely would be a good candidate for the correct one.</p>
 
-<p>A printer operates in much the similar way: a printer recieves a digital encoding of all colors and positions they should occupy on a sheet of paper. Given the encoding, my idealized theoretical printer vibrates its needle to move to different locations on the page to bring about the miracle of color.</p>
+<p>Let’s call the space containing all possible hypotheses \(H \), we will call \(D\) our version space. Now suppose we are trying to find how likely it is that the points in \(D\) belong to some hypothesis \(h \in H\). Well we can formalize this as the probability of \(D\) given the hypothesis \(h\).</p>
 
-<p>Similarly to how Hofstatder exploited the property of resonant frequency to make a disk break, we know that there is a one to one mapping between the digital encoding that a printer receives and the displayed colors on an image. This means that given a handcrafted encoding we should in principle be able to manipulate the color needle of a printer in whatever way we wish. Therefore, there must exist at least one encoding that can force the printer to malfunction by making the needle vibrate uncontrollably. In other words, for any printer ever invented or to be invented in the distant future, there must exist a encoding of colors which the printer will not be able to print.</p>
+<p>\(p(D | h) = \frac{1}{|h|^N} \)</p>
+
+<p>The above formula is simply making a counting argument where we assume we are drawing \(N \) points from \(h\) with replacement. The probability of drawing any one point from \(h \) is just the inverse of the number of elements in \(h\).</p>
+
+<p>Let’s see how we can use the above formula to compare what’s more likely that \(D \) belong to either one of:</p>
+
+<ul>
+<li>\(h_1 = \{ \) the set of powers of two under 50 \(\}\)</li>
+
+<li>\(h_2 = \{\) the set of even numbers under a 100 \(\} \)</li>
+</ul>
+
+<p>We just need to compute the size of \(h_i\) and evaluate \(p(D|h_i)\) for all \(i\) in our case \(i = \{1,2 \}\)</p>
+
+<ul>
+<li>\(|h_1| = 5 \) since \(h_1 = \{2,4,8,16,32 \}\) so that \(p(D|h) = \frac{1}{|h_1|^3} = \frac{1}{5}^3 = 0.008 \)</li>
+
+<li>\(|h_2| = 50\) so that \(p(D | h_2) = \frac{1}{50}^3 = 0.000008 \)</li>
+</ul>
+
+<p>In short \(h_1\) is \(0.008/0.000008 = 1000 \) times more likely than \(h_2\) and that’s just after observing 3 examples!</p>
+
+<p>The difference is even more apparent if our dataset is larger so feel free to evaluate \(p(D|h)\) when \(N = 100\).</p>
 
 <h3 id="epilogue">Epilogue</h3>
 
-<p>With this we can finally conclude that:</p>
-
-<blockquote>
-<p>There cannot exist a device that can reproduce the entire visible color space.</p>
-</blockquote>
-
-<p>In fact we have illustrated something much more powerful:</p>
-
-<blockquote>
-<p>There cannot exist any device that can reproduce the entirety of any space.</p>
-</blockquote>
-
-<p>And here I leave you with one of the deepest truths uncovered in Mathematics, Gödel’s incompleteness theorem. I’ll prove Gödel’s incompleteness theorem in a formal but easy argument in my next blog post. What we will cover is specifically the process by which we inspect a printer or gramophone to find the respective encodings of color and sound that would cause them to malfunction.</p>
+<p>Hopefully I’ve given you a taste as to why a likely hypothesis is probably the correct one. Astute readers might have noticed that \(h_1\) highly overfits the data since it’s just a hypothesis that fits exactly the points in \(D\). Suppose we observe a new point 52 then \(h_1\) would no longer fit the data but \(h_2\) still would. There are many tricks employed in Machine Learning to avoid this scenario and hopefully I’ll cover those in another blog post.</p>
     </div>
     <div class="span4">
         <h3>About me</h3>
@@ -201,7 +205,7 @@ trying an external reference now, should be careful if image ever disappers it m
 <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
   var disqus_shortname = 'marksaro'; // required: replace example with your forum shortname
-  var disqus_identifier = "/2015/03/02/color-theory-and-the-theory-of-computation/";
+  var disqus_identifier = "/2015/03/08/occam-razor-explained/";
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
   (function() {
@@ -220,7 +224,7 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <!-- <div id=twitter>
 If you liked this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/2015/03/02/color-theory-and-the-theory-of-computation/&text=Color Theory and Theory of Computation&via=MarkSaroufim" 
+<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/2015/03/08/occam-razor-explained/&text=Occam's Razor&via=MarkSaroufim" 
    target="_blank">
   share it with your followers</a> 
 or 
