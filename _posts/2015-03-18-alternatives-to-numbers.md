@@ -57,7 +57,8 @@ To show that I am not in fact rambling over trivialities, I will show you how to
     (cons (quote ()) n)))
 {% endhighlight %}
 
->Q: How would you substract one?
+>Q: How would you subtract one?
+
 >A: Remove one ()
 
 {% highlight scheme %}
