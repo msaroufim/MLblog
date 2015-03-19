@@ -83,4 +83,4 @@ To show that I am not in fact rambling over trivialities, I will show you how to
 
 ###Epilogue
 
-This is a simple yet neat application showing why we shouldn't attach much importance to our numbering scheme. This idea is not foreign to most computer scientists since they are used to working in different bases, symbols such as 1,2,3 are just abstractions over quantities which is what we really care about. 
+This is a simple yet neat application showing why we shouldn't attach much importance to our numbering scheme. This idea is not foreign to most computer scientists since they are used to working in different bases. Symbols such as 1,2,3 are just abstractions over quantities and we musn't forget what it is that we are actually making statements about.
