@@ -94,35 +94,91 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <div class="row-fluid">
     <div class="span8">
-        <h2 id="asimovs_foundation">Asimov’s Foundation</h2>
+        <h2 id="alternative_numbering_schemes">Alternative Numbering Schemes</h2>
 
-<p>I recently just finished Asimov’s fourth Foundation Book: Foundation and Edge. The series is excellent and I wholeheartedly recommend it to any sci-fi fans. The empire is about to fall into 30000 years of darkness when Hari Seldon Mathematician/Prophet establishes a Foundation of scholars to document all of human knowledge as part of a complicated 1000 year plan to establish a stronger second empire.</p>
+<p>Today’s post will be a short one, I recently bought a copy of <a href="http://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992/ref=sr_1_1?ie=UTF8&qid=1426735911&sr=8-1&keywords=the+little+schemer">The Little Schemer</a> and have had a really fun experience with it. The Little Schemer introduces many deep mathematical ideas in a concise Socratic treatment. I enjoyed many sections of the book but chose to comment briefly on just one.</p>
 
-<p>The first novel of the series was written in 1942 and it should be extremely curious for modern readers to note that an entire planet was needed to document all of human knowledge. In fact Wikipedia has provided such a documentation by instead crowdsourcing the entire process and had it more or less completed in a decade.</p>
+<h3 id="representations_what_are_numbers">Representations (What are numbers?)</h3>
 
-<h2 id="interpolation_as_a_predictor">Interpolation as a predictor</h2>
+<p>Depending on who you ask you might get a different answer. In the first corner, we have Intuitionists who claim that mathematical constructions including numbers are abstract entities. An Intuitionist would for instance claim that there is no such thing as a true infinity and that things merely appear infinite to us if they are large enough.</p>
 
-<p>Breakthroughs might not happen on problems we deem important today, but instead refine current technologies to enable other kinds of breakthroughs In the Foundation even though the protagonists are in the distant future where mankind has colonized into the far reaches of the universe, mankind still communicates via letters. I believe that for an author in 1942 paper and a complex system of inter-spatial tubes might have never looked like an improper medium to communicate information but the complexity and cost of such a system dwarves the internet. So ask an author in 2014: how would people communicate in the future and odds are they’ll imagine something like people sitting on ergonomic chairs typing away on their paper thin tablets transmitting information wirelessly. The infrastructure might include satellites operating as routing stations transmitting Wi-fi signals through space.</p>
-
-<blockquote>
-<p>The problem is that any attempt to imagine what future technologies will look like will attempt to do so via analogy to technologies we use today.</p>
-</blockquote>
-
-<p>We’ve made breakthroughs in the speed at which we can transmit information but yet we haven’t made substantial progress in finding other planets we could colonize. Yes we do have Philae on the Rosetta comet and Curiosity on Mars yet we still don’t have affordable spacecraft or space-travel, we don’t know how to travel through wormholes and maybe fundamentally we can’t.</p>
-
-<h3 id="neuroscience_fugue">Neuroscience fugue</h3>
-
-<p>Neuroscientists face a similar problem where the tools they are working with makes them incapable of making any great strides to understand the human brain. There are no instruments that can measure the various concentrations of neurotransmitters on a subject who is alive, we have no instruments to map specific neural level activity with cognition. However, because we believe that the brain is essentially a computer with hundreds of billions of components we call neurons then there should be no fundamental reason why we can’t understand them by analogy to computers.</p>
+<p>In the second corner, we have Platonists who espouse the falsehood of assuming that perception and the object of perception are the same. A chair is not the same thing as the mental image of a chair and it often proves useful to dissociate our own perceptions of truth from Mathematics. It might have been obvious to the human race at some point that the sun spins around the earth since that is what people observed by looking at the sky.</p>
 
 <blockquote>
-<p>I propose that maybe we are facing an instance of reasoning via a false analogy, maybe a computer is the wrong abstraction for the brain.</p>
+<p>Q:So what’s a number?</p>
 </blockquote>
 
-<p>When Descartes took to studying the brain, he also used the analogy that made the most sense at the time. He imagined the brain as a complex hydraulic engine that moves the body or creates thoughts via a fluidic pressure on different parts of the brain. The center of decision making would be the Pineal Gland (Last I checked people still don’t know what a Pineal Gland does).</p>
+<blockquote>
+<p>A:Umm 0,1,2,3,4</p>
+</blockquote>
 
-<h2 id="epilogue">Epilogue</h2>
+<p>That’s not a bad attempt: we have symbols that correspond to different quantities. The 3 dots tell us that there are many more symbols and that starting at 0 we can generate all quantities by repeatedly adding 1.</p>
 
-<p>So really the lesson is: any prediction we might make about the future is still an extrapolation of what we observe in the present. Asimov and Descartes were doomed to think via false analogies. Asimov failed to predict what technology would look like 40 years after he published the first Foundation and Descartes’ story reminds us how foolish we will look in retrospect for reasoning via incorrect abstractions.</p>
+<p>Let’s try something else</p>
+
+<blockquote>
+<p>Q: What’s a number?</p>
+</blockquote>
+
+<blockquote>
+<p>A: (), (()), ((),()),((),(),())</p>
+</blockquote>
+
+<blockquote>
+<p>Q: wat?</p>
+</blockquote>
+
+<p>So what’s going on here is we’ve simply picked different symbols for our numbering scheme: instead of using the integers we instead use a list where the number of empty lists corresponds to our quantities. So (()) corresponds to 1 and ((),()) corresponds to two.</p>
+
+<h3 id="implementing_an_alternative_numbering_scheme_in_scheme">Implementing an alternative numbering scheme in Scheme</h3>
+
+<p>To show that I am not in fact rambling over trivialities, I will show you how to implement addition using our parenthesis based numbering scheme. But first we’ll build up the helper functions we’ll need to perform addition.</p>
+
+<blockquote>
+<p>Q: How would you test for zero?</p>
+</blockquote>
+
+<blockquote>
+<p>A:Test if the list is null</p>
+</blockquote>
+<div class='highlight'><pre><code class='scheme'><span class='p'>(</span><span class='k'>define </span><span class='nv'>sero?</span>
+    <span class='p'>(</span><span class='k'>lambda </span><span class='p'>(</span><span class='nf'>n</span><span class='p'>)</span>
+    <span class='p'>(</span><span class='nb'>null? </span><span class='nv'>n</span><span class='p'>)))</span>
+</code></pre></div>
+<blockquote>
+<p>Q: How would you add 1 to a number</p>
+</blockquote>
+
+<blockquote>
+<p>A: Prepend () to it</p>
+</blockquote>
+<div class='highlight'><pre><code class='scheme'><span class='p'>(</span><span class='k'>define </span><span class='nv'>edd1</span>
+    <span class='p'>(</span><span class='k'>lambda </span><span class='p'>(</span><span class='nf'>n</span><span class='p'>)</span>
+    <span class='p'>(</span><span class='nb'>cons </span><span class='p'>(</span><span class='k'>quote </span><span class='p'>())</span> <span class='nv'>n</span><span class='p'>)))</span>
+</code></pre></div>
+<blockquote>
+<p>Q: How would you substract one? A: Remove one ()</p>
+</blockquote>
+<div class='highlight'><pre><code class='scheme'><span class='p'>(</span><span class='k'>define </span><span class='nv'>zub1</span>
+    <span class='p'>(</span><span class='k'>lambda </span><span class='p'>(</span><span class='nf'>n</span><span class='p'>)</span>
+        <span class='p'>(</span><span class='nb'>cdr </span><span class='nv'>n</span><span class='p'>)))</span>
+</code></pre></div>
+<blockquote>
+<p>Q: How would you add two numbers n and m?</p>
+</blockquote>
+
+<blockquote>
+<p>A: Add 1 to n, m times</p>
+</blockquote>
+<div class='highlight'><pre><code class='scheme'><span class='p'>(</span><span class='k'>define </span><span class='nv'>+</span>
+    <span class='p'>(</span><span class='k'>lambda </span><span class='p'>(</span><span class='nf'>n</span> <span class='nv'>m</span><span class='p'>)</span>
+        <span class='p'>(</span><span class='nf'>cond</span>
+            <span class='p'>((</span><span class='nf'>sero?</span> <span class='nv'>m</span><span class='p'>)</span> <span class='nv'>n</span><span class='p'>)</span>
+            <span class='p'>(</span><span class='k'>else </span><span class='p'>(</span><span class='nf'>edd1</span> <span class='p'>(</span><span class='nb'>+ </span><span class='nv'>n</span> <span class='p'>(</span><span class='nf'>zub1</span> <span class='nv'>m</span><span class='p'>)))))))</span>
+</code></pre></div>
+<h3 id="epilogue">Epilogue</h3>
+
+<p>This is a simple yet neat application showing why we shouldn’t attach much importance to our numbering scheme. This idea is not foreign to most computer scientists since they are used to working in different bases, symbols such as 1,2,3 are just abstractions over quantities which is what we really care about.</p>
     </div>
     <div class="span4">
         <h3>About me</h3>
@@ -177,7 +233,7 @@ trying an external reference now, should be careful if image ever disappers it m
 <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
   var disqus_shortname = 'marksaro'; // required: replace example with your forum shortname
-  var disqus_identifier = "/2014/11/15/scifi-and-predicting-the-future/";
+  var disqus_identifier = "/2015/03/18/alternatives-to-numbers/";
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
   (function() {
@@ -196,7 +252,7 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <!-- <div id=twitter>
 If you liked this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/2014/11/15/scifi-and-predicting-the-future/&text=Why Sci-Fi might not be so good at predicting the future&via=MarkSaroufim" 
+<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/2015/03/18/alternatives-to-numbers/&text=Alternative Numbering Schemes&via=MarkSaroufim" 
    target="_blank">
   share it with your followers</a> 
 or 
