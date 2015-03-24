@@ -1,5 +1,6 @@
-# TODO:
+# Machine Learning, Math and Programming Fugues
 
-* Polish up blog posts
-* Polish up CSS for scoial networking buttons
-* Write more blog posts
+Hey There, this is the source code for my Jekyll [Blog](http://www.marksaroufim.com)
+where I post about random things I'm interested in.
+
+
