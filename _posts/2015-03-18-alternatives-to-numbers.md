@@ -5,11 +5,12 @@ comments: true
 ---
 
 ## Alternative Numbering Schemes
-
+---
+---
 Today's post will be a short one, I recently bought a copy of [The Little Schemer](http://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992/ref=sr_1_1?ie=UTF8&qid=1426735911&sr=8-1&keywords=the+little+schemer) and have had a really fun experience with it. The Little Schemer introduces many deep mathematical ideas in a concise Socratic treatment. I enjoyed many sections of the book but chose to comment briefly on just one.
 
 ### Representations (What are numbers?)
-
+---
 
 Depending on who you ask you might get a different answer. In the first corner, we have Intuitionists who claim that mathematical constructions including numbers are abstract entities. An Intuitionist would for instance claim that there is no such thing as a true infinity and that things merely appear infinite to us if they are large enough.
 
@@ -32,7 +33,7 @@ Let's try something else
 So what's going on here is we've simply picked different symbols for our numbering scheme: instead of using the integers we instead use a list where the number of empty lists corresponds to our quantities. So (()) corresponds to 1 and ((),()) corresponds to two. 
 
 ###Implementing an alternative numbering scheme in Scheme
-
+---
 To show that I am not in fact rambling over trivialities, I will show you how to implement addition using our parenthesis based numbering scheme. But first we'll build up the helper functions we'll need to perform addition.
 
 >Q: How would you test for zero?
@@ -82,5 +83,5 @@ To show that I am not in fact rambling over trivialities, I will show you how to
 {% endhighlight %}
 
 ###Epilogue
-
-This is a simple yet neat application showing why we shouldn't attach much importance to our numbering scheme. This idea is not foreign to most computer scientists since they are used to working in different bases. Symbols such as 1,2,3 are just abstractions over quantities and we musn't forget what it is that we are actually making statements about.
+---
+This is a simple yet neat application showing why we shouldn't attach much importance to our numbering scheme. This idea is familiar to most computer scientists since they are used to working in different numerical bases.

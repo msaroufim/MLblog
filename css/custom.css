@@ -17,6 +17,7 @@ body {
 	color: rgba(0,0,0,0.8);
 	font-size: 18px;
 	line-height: 1.4;
+	min-width: 800px;
 
 }
 
@@ -45,6 +46,11 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
 	text-align: left;
+	margin-top:80px;
+    margin-bottom:60px;
+    margin: 0.67em 0;
+    /*font-family: Stratum-1-web;*/
+
 }
 
 ul {

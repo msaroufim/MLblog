@@ -5,9 +5,10 @@ comments: true
 ---
 
 ## Occam's Razor
-
+---
+---
 ### Truth is found where less assumptions are made
-
+---
 One of the cornerstones of Machine Learning is Occam's Razor. Essentially it's a principle by which two competing hypotheses about the world may be compared according to their simplicity. An appropriate definition may be lifted off from Wikipedia:
 
 >The principle states that among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected. Other, more complicated solutions may ultimately prove to provide better predictions, but—in the absence of differences in predictive ability—the fewer assumptions that are made, the better.
@@ -15,7 +16,7 @@ One of the cornerstones of Machine Learning is Occam's Razor. Essentially it's a
 The principle is indeed sensible but I always had a feeling that there must be some basic argument showing why it is indeed better to assume simpler hypothesis when possible. Therefore with what follows I'll make a simple probabilistic argument that will hopefully show you why Occam's Razor is indeed a good principle.
 
 ### Truth is found in likelihood
-
+---
 Suppose I gave you a list of numbers \\(D = \\{ 16,32,4 \\} \\) and asked to what hypothesis class do these numbers belong to. In the absence of more information, many valid hypotheses could be formed.
 You could say:
 
@@ -47,5 +48,5 @@ The difference is even more apparent if our dataset is larger so feel free to ev
 
 
 ### Epilogue
-
+---
 Hopefully I've given you a taste as to why a likely hypothesis is probably the correct one. Astute readers might have noticed that \\(h_1\\) highly overfits the data since it's just a hypothesis that fits exactly the points in \\(D\\). Suppose we observe a new point 52 then \\(h_1\\) would no longer fit the data but \\(h_2\\) still would. There are many tricks employed in Machine Learning to avoid this scenario and hopefully I'll cover those in another blog post. 

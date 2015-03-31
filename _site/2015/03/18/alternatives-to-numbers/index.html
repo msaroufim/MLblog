@@ -95,11 +95,11 @@ trying an external reference now, should be careful if image ever disappers it m
 <div class="row-fluid">
     <div class="span8">
         <h2 id="alternative_numbering_schemes">Alternative Numbering Schemes</h2>
-
+<hr /><hr />
 <p>Today’s post will be a short one, I recently bought a copy of <a href="http://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992/ref=sr_1_1?ie=UTF8&qid=1426735911&sr=8-1&keywords=the+little+schemer">The Little Schemer</a> and have had a really fun experience with it. The Little Schemer introduces many deep mathematical ideas in a concise Socratic treatment. I enjoyed many sections of the book but chose to comment briefly on just one.</p>
 
 <h3 id="representations_what_are_numbers">Representations (What are numbers?)</h3>
-
+<hr />
 <p>Depending on who you ask you might get a different answer. In the first corner, we have Intuitionists who claim that mathematical constructions including numbers are abstract entities. An Intuitionist would for instance claim that there is no such thing as a true infinity and that things merely appear infinite to us if they are large enough.</p>
 
 <p>In the second corner, we have Platonists who espouse the falsehood of assuming that perception and the object of perception are the same. A chair is not the same thing as the mental image of a chair and it often proves useful to dissociate our own perceptions of truth from Mathematics. It might have been obvious to the human race at some point that the sun spins around the earth since that is what people observed by looking at the sky.</p>
@@ -131,7 +131,7 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>So what’s going on here is we’ve simply picked different symbols for our numbering scheme: instead of using the integers we instead use a list where the number of empty lists corresponds to our quantities. So (()) corresponds to 1 and ((),()) corresponds to two.</p>
 
 <h3 id="implementing_an_alternative_numbering_scheme_in_scheme">Implementing an alternative numbering scheme in Scheme</h3>
-
+<hr />
 <p>To show that I am not in fact rambling over trivialities, I will show you how to implement addition using our parenthesis based numbering scheme. But first we’ll build up the helper functions we’ll need to perform addition.</p>
 
 <blockquote>
@@ -181,12 +181,12 @@ trying an external reference now, should be careful if image ever disappers it m
             <span class='p'>(</span><span class='k'>else </span><span class='p'>(</span><span class='nf'>edd1</span> <span class='p'>(</span><span class='nb'>+ </span><span class='nv'>n</span> <span class='p'>(</span><span class='nf'>zub1</span> <span class='nv'>m</span><span class='p'>)))))))</span>
 </code></pre></div>
 <h3 id="epilogue">Epilogue</h3>
-
-<p>This is a simple yet neat application showing why we shouldn’t attach much importance to our numbering scheme. This idea is not foreign to most computer scientists since they are used to working in different bases. Symbols such as 1,2,3 are just abstractions over quantities and we musn’t forget what it is that we are actually making statements about.</p>
+<hr />
+<p>This is a simple yet neat application showing why we shouldn’t attach much importance to our numbering scheme. This idea is familiar to most computer scientists since they are used to working in different numerical bases.</p>
     </div>
     <div class="span4">
         <h3>About me</h3>
-<br>
+<hr />
 <p>Hey I'm Mark, I work at Microsoft as a PM in the Shared Data Platform. Before that I spent a few months working in the Analytics group at Bing Ads. Prior to that I spent two years at UC San Diego doing research in Machine Learning. In between those two years, I interned over the summer at JPL in NASA's first data science group. </p>
 
 <h3>Latest Posts</h3>
