@@ -58,7 +58,7 @@ ul {
 }
 
 #nav {
-	position: fixed;
+	position: relative;
 	float:left;
 	top: 300px;
 	left: 20px;

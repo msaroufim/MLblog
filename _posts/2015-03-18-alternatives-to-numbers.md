@@ -16,9 +16,9 @@ Depending on who you ask you might get a different answer. In the first corner, 
 
 In the second corner, we have Platonists who espouse the falsehood of assuming that perception and the object of perception are the same. A chair is not the same thing as the mental image of a chair and it often proves useful to dissociate our own perceptions of truth from Mathematics. It might have been obvious to the human race at some point that the sun spins around the earth since that is what people observed by looking at the sky. 
 
->Q:So what's a number?
+>Q: So what's a number?
 
->A:Umm 0,1,2,3,4...
+>A: Umm 0,1,2,3,4...
 
 That's not a bad attempt: we have symbols that correspond to different quantities. The 3 dots tell us that there are many more symbols and that starting at 0 we can generate all quantities by repeatedly adding 1.
 
@@ -38,7 +38,7 @@ To show that I am not in fact rambling over trivialities, I will show you how to
 
 >Q: How would you test for zero?
 
->A:Test if the list is null
+>A: Test if the list is null
 
 {% highlight scheme %}
 (define sero?
