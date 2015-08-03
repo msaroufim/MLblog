@@ -9,9 +9,13 @@ comments: true
 ---
 ## An easier way to think of quantum computers 
 ---
-I was very fortunate my last quarter as a graduate student at UCSD to have helped organize a quantum computing seminar. I was strongly influenced by Aaronson's excellent book [Quantum Computing Since Democritus](http://www.amazon.com/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565) where Aaronson's makes a strong point that Quantum Computing is easy if you abstract away the physics.
+I was very fortunate my last quarter as a graduate student at UCSD to have helped organize a quantum computing seminar. I was strongly influenced by Aaronson's excellent book [Quantum Computing Since Democritus](http://www.amazon.com/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565) where Aaronson makes a strong point that Quantum Computing is easy if you abstract away the physics.
 
-That may sound controversial but it really isn't, do algorithmists think of the electromagnetic waves storing bits on disk when they write pseudocode. Theorists are generally unaware of how computers work and more applied computer scientists are similarly unaware of how electronics work. Abstraction is powerful and allows one to focus on problems that exist at different conceptual levels. Why should quantum computing be any different? The approach that makes the most sense is to take it as a given that physicists will provide us with a basic set of quantum logic gates whether they are spinning or freezing or backflipping elementary particles in various gases is irrelevant to us. We can make more progress if we work with quantum logic gates as opposed to quantum physics.
+That may sound controversial but it really isn't.
+
+> Do algorithmists think of the electromagnetic waves storing bits on disk when they write pseudocode? 
+> 
+Theorists are generally unaware of how computers work and more applied computer scientists are similarly unaware of how electronics work and justly so! Abstraction is powerful and allows one to focus on problems that exist at different conceptual levels. Why should quantum computing be any different? The approach that makes the most sense is to take it as a given that physicists will provide us with a basic set of quantum logic gates whether they are spinning or freezing or backflipping elementary particles in various gases is irrelevant to us. We can make more progress if we work with quantum logic gates as opposed to quantum physics.
 
 ## What is a Quantum Computer?
 ---
