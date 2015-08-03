@@ -3,6 +3,20 @@ layout: default
 title: About
 ---
 
+## Update: Aug 3, 2015
+
+My schedule has been packed since I've started working on the [MSFT/AOL deal](http://www.reuters.com/article/2015/06/29/us-microsoft-employment-idUSKCN0P92PT20150629). Prior to that I gained a deep interest in developer UX: as in, how do you create usable APIs, easily enabled scenarios and I got to exercise that interest by working in real time telemetry.
+
+
+In my spare time I've been working on a wide range of stuff:
+
+* Setting up real time telemetry with sensors on Arduino
+* Graphics programming to gain some solid experience in OpenGL and WebGL programming
+* Trying my hand at different Kaggle competitions
+* Redesigning my blog to be more usable. 
+
+Things have been really hectic at work and I'll try to update my blog once some of the craziness clears up.
+
 ## What I've been up to with Web Development
 
 Since the beginning of February, I've been trying to flex some web development muscles. I hadn't done any web development before but I've getting more excited about sharing some of my work so I've been frantically going over both frontend and backend books to do so. 
