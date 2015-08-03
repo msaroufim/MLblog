@@ -22,7 +22,7 @@ In my spare time I've been working on a wide range of stuff:
 
 Things have been really hectic at work and I'll try to update my blog once some of the craziness clears up with links or blog posts to all of the above.
 
-## What I've been up to with Web Development
+## Update: Feb 10, 2015
 
 Since the beginning of February, I've been trying to flex some web development muscles. I hadn't done any web development before but I've getting more excited about sharing some of my work so I've been frantically going over both frontend and backend books to do so. 
 
