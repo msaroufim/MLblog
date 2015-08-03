@@ -4,9 +4,10 @@ description: "My blog about machine learning, technology and philosophy"
 url: "http://www.marksaroufim.com"
 
 paginate: 10
+markdown: maruku
 permalink: pretty
 highlighter: pygments
-pages_list:       
+pages_list:
   About: '/about'
   Archive: '/archive'
   #LinkedIn/CV
