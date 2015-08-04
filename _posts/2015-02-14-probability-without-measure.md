@@ -15,7 +15,7 @@ Way before Probability Theory was its own field let alone a field with rigorous 
 * If A pays x$
 * And B pays x$
 * The winner gets paid 2x$
-
+<br>
 This definition seems fairly intuitive because we can actually attribute a meaning to the title \\(P(event) = something \\) by claiming that:
 
 
@@ -36,7 +36,7 @@ Von Mises was the first to propose that probability theory could find its founda
 
 * Given an observed bit string 001110
 * What is the probability that the next bit observed is a 1 so that sequence becomes 0011101?
-
+<br>
 The question is meaningful becomes if the length of the string is sufficiently large then we expect that looking at a subset of the strings will give us a statistical estimate of the frequency of each bit.
 
 Fortunately we also have a method of quantifying how random a length \\(n \\) bitstring is: Kolmogorov Complexity!
@@ -47,7 +47,7 @@ Suppose you're given two strings:
 
 * \\(A = 01 01 01 01 01 01 01 \\) 
 * \\(B = 00 10 01 00 10 11 11 \\)
-
+<br>
 My question is which string looks more random? Well one way to approach this is to see if a string has many repetitions and we notice indeed that \\(A \\) is simply 01 repeated 7 times so it's essentially the same message appended to itself 7 times. \\(B \\) on the other hand seems to lack such a clear looking pattern so we can claim that \\(B \\) is more random than \\(A \\). 
 
 This is exactly the notion that Kolmogorov complexity captures! Unfortunately, it is also impossible to determine the Kolmogorov complexity of a random string! Whaaaat? Kolmogorov complexity belongs to a class of problems called undecidable which means that it can be reduced to the halting problem.
@@ -76,7 +76,7 @@ Now we will instead show how to prove the weak law of large numbers using games 
 * \\(K\_i \\) will be the skeptic capital at time \\(i \\)
 * \\(M\_n \\) is the amount of tickets that the skeptic purchases
 * \\(x\_n \\) is the value of a ticket determined by nature
-
+<br>
 Now we can finally introduce the game:
 
 * \\(K\_0 = 1 \\)
@@ -84,7 +84,7 @@ Now we can finally introduce the game:
 	* Skeptic announces \\(M\_n \in R \\)
 	* Reality announces \\(x\_n \in \{0,1 \} \\)
 	* \\(K\_n = K\_{n - 1} + M\_{n}x\_{n} \\)
-
+<br>
 What we will prove is that there exists a winning strategy for the skeptic. But first we will use a favorite trick employed by philosophers and first define what we mean by winning. The relationship with the weak law of large numbers will come out soon.
 
 We claim that the skeptic wins \\(K\_n > 0 \\) for all \\(n \\) we call this condition the no-bankruptcy condition. And if one two things happen either:
@@ -106,7 +106,7 @@ Note how I use the term arbitrarily instead of the term randomly, this distincti
 Now for the proof: If the skeptic bets an infinitely small amount \\(\epsilon \\) on heads then nature will be forced to not play heads often or else the skeptic will become infinitely rich. Therefore nature will start playing tails, when that happens the skeptic starts playing tails. Essentially this almost silly example provides a proof of concept for machine learning: If nature's strategy is not completely arbitrary then nature's strategy has an underlying strategy that can be learnt from data! 
 
 > TLDR: If nature's strategy is not completely uniform, meaning if nature does not play heads as often as tails then the skeptic can learn nature's strategy and become infinitely rich by playing an infinite number of rounds.
-
+<br>
 And that's the proof of the weak law of large numbers! We can think of nature as an entity trying to minimize rare events: that's why there aren't that many infinitely rich folks out there! (Actually the real proof is slightly more complicated and is covered in my original [tutorial](https://www.dropbox.com/s/zwio6k94ix40q1s/ItsOnlyAGame.pdf)
 
 Not only is this a completely valid proof of the weak law of large numbers it also does not make the i.i.d assumption so it also implies the measure theoretic result!
