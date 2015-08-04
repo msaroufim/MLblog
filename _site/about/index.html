@@ -36,21 +36,23 @@ mixpanel.init("0513c7cecbe7663800c58569efbc4275");</script><!-- end Mixpanel -->
   </head>
 
   <body>
- <aside>
- <ul id="nav">
- <li class="active"><a href="/">Home</a></li>
- <li class="active"><a href="/archive">Blog Archive</a></li>
- <li class="active"><a href="/about">About</a></li>
- <li class="active"><a href="http://advertise.bingads.microsoft.com/en-us/blogauthor/48641/mark-saroufim-msft?tab=blogposts">MSFT blog</a></li>
- <li class="active"><a href="http://cseweb.ucsd.edu/~msaroufi/">Old UCSD webpage</a></li>
- <li class="active"><a href= "https://www.linkedin.com/profile/view?id=94048952&trk=nav_responsive_tab_profile">LinkedIn</a></li>
- <li class="active"><a href= "https://onedrive.live.com/redir?resid=5A5E73371630DFBB%212500">Academic CV</a></li>
- <li class="active"><a href= "https://github.com/msaroufim">Github </a></li>
- <li class="active"><a href= "https://www.goodreads.com/user/show/35150018-mark-saroufim">Reading List</a></li>
- <li class="active"><a href="https://www.youtube.com/watch?v=rdxfx1mM_nU">My first standup show</a></li>
 
- </ul>
+<nav class="main-nav">
 
+
+<div align="left">Mark Saroufim's blog</span>
+<div align="right">
+  <a href="/">Home</a>
+  <a href="/archive">Blog Archive</a>
+  <a href="/about">About</a>
+
+  <a href= "https://www.linkedin.com/profile/view?id=94048952&trk=nav_responsive_tab_profile" target="_blank">LinkedIn</a>
+  <a href= "https://onedrive.live.com/redir?resid=5A5E73371630DFBB%212500" target="_blank">Academic CV</a>
+   <a href= "https://github.com/msaroufim" target="_blank">Github </a>
+  <!-- <a href= "https://www.goodreads.com/user/show/35150018-mark-saroufim">Reading List</a> -->
+  <a href="https://www.youtube.com/watch?v=rdxfx1mM_nU" target="_blank">Standup</a>
+  </nav>
+</div>
 <script>
 mixpanel.track('page viewed', {
     'page name' : document.title,
@@ -59,16 +61,16 @@ mixpanel.track('page viewed', {
 
 </script>
 
+<hr>
 
+<!--
 <div id="mark" style="width:20%">
 <h1>Mark Saroufim</h1>
-<!-- Make image link to something, maybe twitter account? -->
-<!--Had issues with just linking image in img folder
-trying an external reference now, should be careful if image ever disappers it means postimg server took it down -->
+
  <img class="avatar" src="http://s21.postimg.org/l7czx6puv/avatar.jpg"></img>
 </div>
 </aside>
-
+ -->
    <!--  <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -88,7 +90,7 @@ trying an external reference now, should be careful if image ever disappers it m
       </div>
     </div> -->
 
-    <div class="container" style="width:50%">
+    <div class="container" style="width:80%">
 
 
 
@@ -99,24 +101,30 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>My schedule has been packed since I’ve started working on the <a href="http://www.reuters.com/article/2015/06/29/us-microsoft-employment-idUSKCN0P92PT20150629">MSFT/AOL deal</a>. Prior to that I gained a deep interest in developer UX as in:</p>
 
 <blockquote>
-<p>how do you create usable APIs to easily enable different product scenarios.</p>
+<p>How do you create usable APIs to easily enable different product scenarios? I got to exercise that interest by onboarding PMs and devs to real time telemetry.</p>
 </blockquote>
-
-<p>I got to exercise that interest by working in real time telemetry.</p>
 
 <p><br /></p>
 
 <p>In my spare time I’ve been working on a wide range of stuff:</p>
 
-<ol>
-<li>Setting up real time telemetry with sensors on Arduino</li>
+<ul>
+<li>
+<p>Setting up real time telemetry with sensors on Arduino</p>
+</li>
 
-<li>Graphics programming to gain some solid experience in OpenGL and WebGL programming by taking <a href="https://class.coursera.org/webgl-001">Ed Angel’s coursera class</a></li>
+<li>
+<p>Graphics programming to gain some solid experience in OpenGL and WebGL programming by taking <a href="https://class.coursera.org/webgl-001">Ed Angel’s coursera class</a></p>
+</li>
 
-<li>Trying my hand at different Kaggle competitions</li>
+<li>
+<p>Trying my hand at different Kaggle competitions</p>
+</li>
 
-<li>Redesigning my blog to be more usable.</li>
-</ol>
+<li>
+<p>Redesigning my blog to be more usable.</p>
+</li>
+</ul>
 
 <p>Things have been really hectic at work and I’ll try to update my blog once some of the craziness clears up with links or blog posts to all of the above.</p>
 
@@ -148,6 +156,8 @@ trying an external reference now, should be careful if image ever disappers it m
 <ul>
 <li>JS Patterns: This book made me understand why people hate on JS so much. I probably need to go over the code reuse chapter again. The objective is for me to understand how to come up with the below snippet from the perspective of someone who has never seen it.</li>
 </ul>
+
+<p><br /></p>
 <div class='highlight'><pre><code class='javascript'><span class='kd'>function</span> <span class='nx'>inherit</span><span class='p'>(</span><span class='nx'>C</span><span class='p'>,</span> <span class='nx'>P</span><span class='p'>)</span> <span class='p'>{</span>
     <span class='kd'>var</span> <span class='nx'>F</span> <span class='o'>=</span> <span class='kd'>function</span> <span class='p'>()</span> <span class='p'>{};</span>
     <span class='nx'>F</span><span class='p'>.</span><span class='nx'>prototype</span> <span class='o'>=</span> <span class='nx'>P</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>;</span>
@@ -157,26 +167,35 @@ trying an external reference now, should be careful if image ever disappers it m
 <span class='p'>}</span>
 </code></pre></div>
 <ul>
-<li>Functional JS: The book looks good so far but I’m still unsure what underscore.js brings that can’t be implemented using the helper functions that JS the good parts highlights. I’ll have to read more to find out</li>
+<li>
+<p>Functional JS: The book looks good so far but I’m still unsure what underscore.js brings that can’t be implemented using the helper functions that JS the good parts highlights. I’ll have to read more to find out</p>
+</li>
 
-<li>Node.js in Action is a good book, it’s difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I’m currently working on a bunch of more interesting node projects now.</li>
+<li>
+<p>Node.js in Action is a good book, it’s difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I’m currently working on a bunch of more interesting node projects now.</p>
+</li>
 
-<li>If Hemingway wrote JS: This is a creative programming book that shows code examples written in the style of authors ranging from 2pac, Kerouac to Roy. I expected this book to be more fun, I can’t say that I got much out of it. I’m remined of Richard Hamming’s remark which goes: If you wanna be succesful then study successes.</li>
+<li>
+<p>If Hemingway wrote JS: This is a creative programming book that shows code examples written in the style of authors ranging from 2pac, Kerouac to Roy. I expected this book to be more fun, I can’t say that I got much out of it. I’m remined of Richard Hamming’s remark which goes: If you wanna be succesful then study successes.</p>
+</li>
 
-<li>Front-End Frameworks: I’m still scratching the surface here. I started looking into the ember and ember data docs and really appreciated how well implemented the observer pattern (discussed in JS patterns) was used to create awesome functionality like:</li>
+<li>
+<p>Front-End Frameworks: I’m still scratching the surface here. I started looking into the ember and ember data docs and really appreciated how well implemented the observer pattern (discussed in JS patterns) was used to create awesome functionality like:</p>
+</li>
 </ul>
 <div class='highlight'><pre><code class='javascript'><span class='nx'>fullName</span><span class='o'>:</span> <span class='kd'>function</span><span class='p'>()</span> <span class='p'>{</span>
     <span class='k'>return</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>get</span><span class='p'>(</span><span class='s1'>&#39;firstName&#39;</span><span class='p'>)</span> <span class='o'>+</span> <span class='s1'>&#39; &#39;</span> <span class='o'>+</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>get</span><span class='p'>(</span><span class='s1'>&#39;lastName&#39;</span><span class='p'>);</span>
   <span class='p'>}.</span><span class='nx'>property</span><span class='p'>(</span><span class='s1'>&#39;firstName&#39;</span><span class='p'>,</span> <span class='s1'>&#39;lastName&#39;</span><span class='p'>)</span>
 <span class='p'>});</span>
 </code></pre></div>
-<p>Ember Data also feels like a node brainchild where a data store (data cached into the browser) does not need to be aware of how an adapter actually gets data whether its a server DB call or external API call. <a href="http://www.smashingmagazine.com/2013/11/07/an-in-depth-introduction-to-ember-js/">This article</a> goes over some of the stuff I liked in more detail</p>
+<ul>
+<li>Ember Data also feels like a node brainchild where a data store (data cached into the browser) does not need to be aware of how an adapter actually gets data whether its a server DB call or external API call. <a href="http://www.smashingmagazine.com/2013/11/07/an-in-depth-introduction-to-ember-js/">This article</a> goes over some of the stuff I liked in more detail</li>
+</ul>
 
 <p>The naming convention also affords a lot of advantages since it makes it easy to go through online code examples. I haven’t necessarily settled for Ember, I’m also looking into Angular which at a first glance seemed pretty complicated but I’m not one to judge the quality of a framework after going through a tutorial. DAE HASKAL FOR WEBSCALE?</p>
     </div>
     <div class="span4">
         <h3>About me</h3>
-<hr />
 <p>Hey I'm Mark, I work at Microsoft as a PM in the Shared Data Platform. Before that I spent a few months working in the Analytics group at Bing Ads. Prior to that I spent two years at UC San Diego doing research in Machine Learning. In between those two years, I interned over the summer at JPL in NASA's first data science group. </p>
 
 <h3>Latest Posts</h3>
@@ -193,13 +212,14 @@ trying an external reference now, should be careful if image ever disappers it m
     <li><a href="/2015/02/14/probability-without-measure/">Probability without measure theory</a></li>
   
 </ul>
+
     </div>
 </div>
 
 <!--   -->
 
 
-    
+
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -208,8 +228,10 @@ trying an external reference now, should be careful if image ever disappers it m
 
 
 </div>
+
   </body>
 </html>
+
 
 
 

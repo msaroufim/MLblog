@@ -36,21 +36,23 @@ mixpanel.init("0513c7cecbe7663800c58569efbc4275");</script><!-- end Mixpanel -->
   </head>
 
   <body>
- <aside>
- <ul id="nav">
- <li class="active"><a href="/">Home</a></li>
- <li class="active"><a href="/archive">Blog Archive</a></li>
- <li class="active"><a href="/about">About</a></li>
- <li class="active"><a href="http://advertise.bingads.microsoft.com/en-us/blogauthor/48641/mark-saroufim-msft?tab=blogposts">MSFT blog</a></li>
- <li class="active"><a href="http://cseweb.ucsd.edu/~msaroufi/">Old UCSD webpage</a></li>
- <li class="active"><a href= "https://www.linkedin.com/profile/view?id=94048952&trk=nav_responsive_tab_profile">LinkedIn</a></li>
- <li class="active"><a href= "https://onedrive.live.com/redir?resid=5A5E73371630DFBB%212500">Academic CV</a></li>
- <li class="active"><a href= "https://github.com/msaroufim">Github </a></li>
- <li class="active"><a href= "https://www.goodreads.com/user/show/35150018-mark-saroufim">Reading List</a></li>
- <li class="active"><a href="https://www.youtube.com/watch?v=rdxfx1mM_nU">My first standup show</a></li>
 
- </ul>
+<nav class="main-nav">
 
+
+<div align="left">Mark Saroufim's blog</span>
+<div align="right">
+  <a href="/">Home</a>
+  <a href="/archive">Blog Archive</a>
+  <a href="/about">About</a>
+
+  <a href= "https://www.linkedin.com/profile/view?id=94048952&trk=nav_responsive_tab_profile" target="_blank">LinkedIn</a>
+  <a href= "https://onedrive.live.com/redir?resid=5A5E73371630DFBB%212500" target="_blank">Academic CV</a>
+   <a href= "https://github.com/msaroufim" target="_blank">Github </a>
+  <!-- <a href= "https://www.goodreads.com/user/show/35150018-mark-saroufim">Reading List</a> -->
+  <a href="https://www.youtube.com/watch?v=rdxfx1mM_nU" target="_blank">Standup</a>
+  </nav>
+</div>
 <script>
 mixpanel.track('page viewed', {
     'page name' : document.title,
@@ -59,16 +61,16 @@ mixpanel.track('page viewed', {
 
 </script>
 
+<hr>
 
+<!--
 <div id="mark" style="width:20%">
 <h1>Mark Saroufim</h1>
-<!-- Make image link to something, maybe twitter account? -->
-<!--Had issues with just linking image in img folder
-trying an external reference now, should be careful if image ever disappers it means postimg server took it down -->
+
  <img class="avatar" src="http://s21.postimg.org/l7czx6puv/avatar.jpg"></img>
 </div>
 </aside>
-
+ -->
    <!--  <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -88,16 +90,16 @@ trying an external reference now, should be careful if image ever disappers it m
       </div>
     </div> -->
 
-    <div class="container" style="width:50%">
+    <div class="container" style="width:80%">
 
 
 
 <div class="row-fluid">
     <div class="span8">
-        <h2 id="simulating_a_classical_computer_using_a_quantum_computer">Simulating a Classical Computer Using a Quantum Computer</h2>
-<hr /><hr />
+        <h1 id="simulating_a_classical_computer_using_a_quantum_computer">Simulating a Classical Computer Using a Quantum Computer</h1>
+
 <h2 id="an_easier_way_to_think_of_quantum_computers">An easier way to think of quantum computers</h2>
-<hr />
+
 <p>I was very fortunate my last quarter as a graduate student at UCSD to have helped organize a quantum computing seminar. I was strongly influenced by Aaronson’s excellent book <a href="http://www.amazon.com/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565">Quantum Computing Since Democritus</a> where Aaronson makes a strong point that Quantum Computing is easy if you abstract away the physics.</p>
 
 <p>That may sound controversial but it really isn’t.</p>
@@ -109,11 +111,11 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>Theorists are generally unaware of how computers work and more applied computer scientists are similarly unaware of how electronics work and justly so! Abstraction is powerful and allows one to focus on problems that exist at different conceptual levels. Why should quantum computing be any different? The approach that makes the most sense is to take it as a given that physicists will provide us with a basic set of quantum logic gates whether they are spinning or freezing or backflipping elementary particles in various gases is irrelevant to us. We can make more progress if we work with quantum logic gates as opposed to quantum physics.</p>
 
 <h2 id="what_is_a_quantum_computer">What is a Quantum Computer?</h2>
-<hr />
+
 <p>I’ll assume that my reader has no knowledge of quantum computing and attempt to draw an analogy with a more well known device: the classical computer.</p>
 
 <h3 id="boolean_logic_fugue">Boolean logic fugue</h3>
-<hr />
+
 <p>At the most abstract level, a computer is a function \(f \) of \(n \) bits that returns either 0 or 1.</p>
 
 <p>\(f(b_1, \dots , b_n) = {0,1 } \)</p>
@@ -128,11 +130,11 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>If you’ve ever wondered why binary is the base of choice for computers the above is a strong argument for that choice, the other being that it is simple to represent one of two states 0 or 1 using a ground or 5V.</p>
 
 <h3 id="back_to_quantum_computers">Back to Quantum Computers</h3>
-<hr />
+
 <p>A quantum computer is then a function \(f \) of \(n \) quantum bits that when measured (think of this as returning for now) returns either 0 or 1.</p>
 
 <h2 id="quantum_computers_are_at_least_as_powerful_as_classical_computers">Quantum Computers are at least as powerful as Classical Computers</h2>
-<hr />
+
 <p>This is a neat result that I proved in the introductory lecture of the seminar, of course this result is not novel in any way: I’m not sure if it was even formally stated in a paper or just taken as a known trivial result but regardless it’s a good exercise to prove your first result about quantum computers.</p>
 
 <h3 id="proving_that_quantum_computers_are_at_least_as_powerful_as_classical_computers_using_truth_tables">Proving that quantum computers are at least as powerful as classical computers using truth tables</h3>
@@ -156,11 +158,11 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>Now inspect the third output in the rows for which the third input is 1. Do those rows look familiar? They should! Because they correspond exactly to the NAND gate! So we can fix the third input bit of a Toffoli gate to 1 to simulate a NAND gate. Therefore we can simulate any NAND circuit or any boolean circuit using Toffoli gates.</p>
 
 <h2 id="are_computers_more_powerful_if_they_are_allowed_to_make_coin_flips">Are computers more powerful if they are allowed to make coin flips?</h2>
-<hr />
+
 <p>The short answer is nobody knows for sure but it is hypothesized that it indeed is. This seems counter-intuitive, nobody would expect that two-face could make superior decisions by flipping a coin so why would the same not be true for computers.</p>
 
 <h3 id="polynomial_identity_testing_case_study_for_randomized_algorithms">Polynomial identity testing: Case study for randomized algorithms</h3>
-<hr />
+
 <p>Suppose you were given two large polynomials \(P_1 \) and \(P_2 \) with many variables each. A natural question is: is \(P_1 \equiv P_2\)? There is no known deterministic algorithm for it but there is an incredibly simple randomized one!</p>
 
 <ul>
@@ -188,7 +190,7 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>Why does this work? Well, if for any \(x\), \(P_1(x) != P_2(x)\) then they are not equivalent. In addition, the more times we iterate over the loop the more confident we are that the two polynomials are equivalent!</p>
 
 <h2 id="simulating_a_coin_flip_using_a_quantum_computer">Simulating a coin flip using a quantum computer</h2>
-<hr />
+
 <p>First we’re going to have to define what a quantum bit is. We represent an arbitrary quantum bit \(a\) as \( | a &gt; = \alpha | 0 &gt; + \beta | 1 &gt; \)</p>
 
 <p>The above definition is read as a quantum bit \(a\) is in state 0 with probability \(\alpha^2\) and in state 1 with probability \(\beta^2\). When people talk about how a quantum bit can be both 1 and 0 at the same time they are refering to the above expression yet they are incorrectly interpreting it. There is nothing weird, magical or massively parallel about a distribution over two variables.</p>
@@ -206,7 +208,7 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>This doesn’t seem like a lot but it is quite significant! Think of how you’d simulate a uniform distribution over \(n \) variables using a uniform distribution over 2 variables. Also related, I hear simulating a fair coin using an unbiased coin is a popular interview question. Another natural question to think about is then how would you simulate a biased coin using an unbiased one?</p>
 
 <h2 id="epilogue">Epilogue</h2>
-<hr />
+
 <p>Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover’s search algorithm and Shor’s factoring algorithm. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I’d recommend you check out the <a href="http://www.cse.ucsd.edu/theory_reading_group/">topics</a> we had in theory reading group at UCSD.</p>
 
 <p>The two big open questions are perhaps: can quantum computers actually be built? If they can, can they solve more problems than classical computers? The complexity theory community seems to think so. As Aaronson would say: all possibilities are equally intriguing since either we learn some pretty fundamental limitations of phyics or we get swanky new quantum computers.</p>
@@ -214,7 +216,6 @@ trying an external reference now, should be careful if image ever disappers it m
     </div>
     <div class="span4">
         <h3>About me</h3>
-<hr />
 <p>Hey I'm Mark, I work at Microsoft as a PM in the Shared Data Platform. Before that I spent a few months working in the Analytics group at Bing Ads. Prior to that I spent two years at UC San Diego doing research in Machine Learning. In between those two years, I interned over the summer at JPL in NASA's first data science group. </p>
 
 <h3>Latest Posts</h3>
@@ -231,6 +232,7 @@ trying an external reference now, should be careful if image ever disappers it m
     <li><a href="/2015/02/14/probability-without-measure/">Probability without measure theory</a></li>
   
 </ul>
+
     </div>
 </div>
 
@@ -252,7 +254,7 @@ trying an external reference now, should be careful if image ever disappers it m
  -->
 
 
-    
+
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -277,8 +279,10 @@ trying an external reference now, should be careful if image ever disappers it m
 
 
 </div>
+
   </body>
 </html>
+
 
 
 

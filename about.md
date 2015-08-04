@@ -7,18 +7,18 @@ title: About
 
 My schedule has been packed since I've started working on the [MSFT/AOL deal](http://www.reuters.com/article/2015/06/29/us-microsoft-employment-idUSKCN0P92PT20150629). Prior to that I gained a deep interest in developer UX as in:
 
-> how do you create usable APIs to easily enable different product scenarios. 
-> 
-I got to exercise that interest by working in real time telemetry.
+> How do you create usable APIs to easily enable different product scenarios? I got to exercise that interest by onboarding PMs and devs to real time telemetry.
 
 <br>
-
 In my spare time I've been working on a wide range of stuff:
 
-1. Setting up real time telemetry with sensors on Arduino
-2. Graphics programming to gain some solid experience in OpenGL and WebGL programming by taking [Ed Angel's coursera class](https://class.coursera.org/webgl-001)
-3. Trying my hand at different Kaggle competitions
-4. Redesigning my blog to be more usable. 
+* Setting up real time telemetry with sensors on Arduino
+
+* Graphics programming to gain some solid experience in OpenGL and WebGL programming by taking [Ed Angel's coursera class](https://class.coursera.org/webgl-001)
+
+* Trying my hand at different Kaggle competitions
+
+* Redesigning my blog to be more usable. 
 
 Things have been really hectic at work and I'll try to update my blog once some of the craziness clears up with links or blog posts to all of the above.
 
@@ -47,6 +47,7 @@ Since the beginning of February, I've been trying to flex some web development m
 
 
 * JS Patterns: This book made me understand why people hate on JS so much. I probably need to go over the code reuse chapter again. The objective is for me to understand how to come up with the below snippet from the perspective of someone who has never seen it.
+<br>
 
 {% highlight javascript %}
 function inherit(C, P) {
@@ -58,9 +59,13 @@ function inherit(C, P) {
 }
 
 {% endhighlight %}
+
 * Functional JS: The book looks good so far but I'm still unsure what underscore.js brings that can't be implemented using the helper functions that JS the good parts highlights. I'll have to read more to find out
-* Node.js in Action is a good book, it's difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I'm currently working on a bunch of more interesting node projects now. 
+
+* Node.js in Action is a good book, it's difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I'm currently working on a bunch of more interesting node projects now.
+
 * If Hemingway wrote JS: This is a creative programming book that shows code examples written in the style of authors ranging from 2pac, Kerouac to Roy. I expected this book to be more fun, I can't say that I got much out of it. I'm remined of Richard Hamming's remark which goes: If you wanna be succesful then study successes.
+
 * Front-End Frameworks: I'm still scratching the surface here. I started looking into the ember and ember data docs and really appreciated how well implemented the observer pattern (discussed in JS patterns) was used to create awesome functionality like:
 
 {% highlight javascript  %}
@@ -70,6 +75,6 @@ fullName: function() {
 });
 {% endhighlight %}
 
-Ember Data also feels like a node brainchild where a data store (data cached into the browser) does not need to be aware of how an adapter actually gets data whether its a server DB call or external API call. [This article](http://www.smashingmagazine.com/2013/11/07/an-in-depth-introduction-to-ember-js/) goes over some of the stuff I liked in more detail 
+* Ember Data also feels like a node brainchild where a data store (data cached into the browser) does not need to be aware of how an adapter actually gets data whether its a server DB call or external API call. [This article](http://www.smashingmagazine.com/2013/11/07/an-in-depth-introduction-to-ember-js/) goes over some of the stuff I liked in more detail 
 
 The naming convention also affords a lot of advantages since it makes it easy to go through online code examples. I haven't necessarily settled for Ember, I'm also looking into Angular which at a first glance seemed pretty complicated but I'm not one to judge the quality of a framework after going through a tutorial. DAE HASKAL FOR WEBSCALE?

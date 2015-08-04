@@ -36,21 +36,23 @@ mixpanel.init("0513c7cecbe7663800c58569efbc4275");</script><!-- end Mixpanel -->
   </head>
 
   <body>
- <aside>
- <ul id="nav">
- <li class="active"><a href="/">Home</a></li>
- <li class="active"><a href="/archive">Blog Archive</a></li>
- <li class="active"><a href="/about">About</a></li>
- <li class="active"><a href="http://advertise.bingads.microsoft.com/en-us/blogauthor/48641/mark-saroufim-msft?tab=blogposts">MSFT blog</a></li>
- <li class="active"><a href="http://cseweb.ucsd.edu/~msaroufi/">Old UCSD webpage</a></li>
- <li class="active"><a href= "https://www.linkedin.com/profile/view?id=94048952&trk=nav_responsive_tab_profile">LinkedIn</a></li>
- <li class="active"><a href= "https://onedrive.live.com/redir?resid=5A5E73371630DFBB%212500">Academic CV</a></li>
- <li class="active"><a href= "https://github.com/msaroufim">Github </a></li>
- <li class="active"><a href= "https://www.goodreads.com/user/show/35150018-mark-saroufim">Reading List</a></li>
- <li class="active"><a href="https://www.youtube.com/watch?v=rdxfx1mM_nU">My first standup show</a></li>
 
- </ul>
+<nav class="main-nav">
 
+
+<div align="left">Mark Saroufim's blog</span>
+<div align="right">
+  <a href="/">Home</a>
+  <a href="/archive">Blog Archive</a>
+  <a href="/about">About</a>
+
+  <a href= "https://www.linkedin.com/profile/view?id=94048952&trk=nav_responsive_tab_profile" target="_blank">LinkedIn</a>
+  <a href= "https://onedrive.live.com/redir?resid=5A5E73371630DFBB%212500" target="_blank">Academic CV</a>
+   <a href= "https://github.com/msaroufim" target="_blank">Github </a>
+  <!-- <a href= "https://www.goodreads.com/user/show/35150018-mark-saroufim">Reading List</a> -->
+  <a href="https://www.youtube.com/watch?v=rdxfx1mM_nU" target="_blank">Standup</a>
+  </nav>
+</div>
 <script>
 mixpanel.track('page viewed', {
     'page name' : document.title,
@@ -59,16 +61,16 @@ mixpanel.track('page viewed', {
 
 </script>
 
+<hr>
 
+<!--
 <div id="mark" style="width:20%">
 <h1>Mark Saroufim</h1>
-<!-- Make image link to something, maybe twitter account? -->
-<!--Had issues with just linking image in img folder
-trying an external reference now, should be careful if image ever disappers it means postimg server took it down -->
+
  <img class="avatar" src="http://s21.postimg.org/l7czx6puv/avatar.jpg"></img>
 </div>
 </aside>
-
+ -->
    <!--  <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -88,20 +90,20 @@ trying an external reference now, should be careful if image ever disappers it m
       </div>
     </div> -->
 
-    <div class="container" style="width:50%">
+    <div class="container" style="width:80%">
 
 
 
 <div class="row-fluid">
     <div class="span8">
-        <h2 id="color_theory_and_the_theory_of_computation">Color Theory and The Theory of Computation</h2>
-<hr /><hr />
+        <h1 id="color_theory_and_the_theory_of_computation">Color Theory and The Theory of Computation</h1>
+
 <p>Over the past few months I’ve been trying to train my eye to appreciate better design. People tend to find better designed blogs to be more trustworthy. While content is king, looks matter too. So I know it will be worthwhile for me to learn more about design. Today I decided to explore the topic of color theory.</p>
 
 <p><strong>Disclaimer: The below is an informal argument that does not constitute a real mathematical proof, it’s value is in providing some intuition behind diagonalization.</strong></p>
 
-<h3 id="the_fundamental_theorem_of_color_engineering">The fundamental theorem of color engineering</h3>
-<hr />
+<h2 id="the_fundamental_theorem_of_color_engineering">The fundamental theorem of color engineering</h2>
+
 <p>My brief foray into design has led me to find this commonly held belief in the design community.</p>
 
 <blockquote>
@@ -116,8 +118,8 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>There cannot exist a device that can reproduce the entire visible color space.</p>
 </blockquote>
 
-<h3 id="the_godel_escher_and_bach_argument">The Godel, Escher and Bach argument</h3>
-<hr />
+<h2 id="the_godel_escher_and_bach_argument">The Godel, Escher and Bach argument</h2>
+
 <p>I will prove the above statement by reducing it to another statement which was proven to be true in the wonderful <a href="http://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567/ref=sr_1_1?ie=UTF8&qid=1425267550&sr=8-1&keywords=godel+escher+and+bach">Godel, Escher and Bach</a></p>
 
 <blockquote>
@@ -126,14 +128,14 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <p>Hofstatder lays out a thought experiment where he discusses whether a gramophone that can play any disk could exist in principle. Hofstatder’s argument is an intriguing one. He makes a claim that given such a perfect gramophone he would inspect its inner workings and construct a disk such that when that disk is played, its creases which would typically produce vibrations in the air to create sound, would instead produce vibrations that oscillate at the disk’s resonant frequency, causing the disk to break. Therefore, we’ve shown that for any gramophone there exits a disk that it cannot play. Or in other words, there exists no gramophone that can play any disk.</p>
 
-<h3 id="the_fundamental_theorem_of_color">The fundamental theorem of color</h3>
-<hr />
+<h2 id="the_fundamental_theorem_of_color">The fundamental theorem of color</h2>
+
 <p>A printer operates in much the similar way: a printer recieves a digital encoding of all colors and positions they should occupy on a sheet of paper. Given the encoding, my idealized theoretical printer vibrates its needle to move to different locations on the page to bring about the miracle of color.</p>
 
 <p>Similarly to how Hofstatder exploited the property of resonant frequency to make a disk break, we know that there is a one to one mapping between the digital encoding that a printer receives and the displayed colors on an image. This means that given a handcrafted encoding we should in principle be able to manipulate the color needle of a printer in whatever way we wish. Therefore, there must exist at least one encoding that can force the printer to malfunction by making the needle vibrate uncontrollably. In other words, for any printer ever invented or to be invented in the distant future, there must exist a encoding of colors which the printer will not be able to print.</p>
 
-<h3 id="epilogue">Epilogue</h3>
-<hr />
+<h2 id="epilogue">Epilogue</h2>
+
 <p>With this we can finally conclude that:</p>
 
 <blockquote>
@@ -150,7 +152,6 @@ trying an external reference now, should be careful if image ever disappers it m
     </div>
     <div class="span4">
         <h3>About me</h3>
-<hr />
 <p>Hey I'm Mark, I work at Microsoft as a PM in the Shared Data Platform. Before that I spent a few months working in the Analytics group at Bing Ads. Prior to that I spent two years at UC San Diego doing research in Machine Learning. In between those two years, I interned over the summer at JPL in NASA's first data science group. </p>
 
 <h3>Latest Posts</h3>
@@ -167,6 +168,7 @@ trying an external reference now, should be careful if image ever disappers it m
     <li><a href="/2015/02/14/probability-without-measure/">Probability without measure theory</a></li>
   
 </ul>
+
     </div>
 </div>
 
@@ -188,7 +190,7 @@ trying an external reference now, should be careful if image ever disappers it m
  -->
 
 
-    
+
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -213,8 +215,10 @@ trying an external reference now, should be careful if image ever disappers it m
 
 
 </div>
+
   </body>
 </html>
+
 
 
 

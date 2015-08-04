@@ -36,21 +36,23 @@ mixpanel.init("0513c7cecbe7663800c58569efbc4275");</script><!-- end Mixpanel -->
   </head>
 
   <body>
- <aside>
- <ul id="nav">
- <li class="active"><a href="/">Home</a></li>
- <li class="active"><a href="/archive">Blog Archive</a></li>
- <li class="active"><a href="/about">About</a></li>
- <li class="active"><a href="http://advertise.bingads.microsoft.com/en-us/blogauthor/48641/mark-saroufim-msft?tab=blogposts">MSFT blog</a></li>
- <li class="active"><a href="http://cseweb.ucsd.edu/~msaroufi/">Old UCSD webpage</a></li>
- <li class="active"><a href= "https://www.linkedin.com/profile/view?id=94048952&trk=nav_responsive_tab_profile">LinkedIn</a></li>
- <li class="active"><a href= "https://onedrive.live.com/redir?resid=5A5E73371630DFBB%212500">Academic CV</a></li>
- <li class="active"><a href= "https://github.com/msaroufim">Github </a></li>
- <li class="active"><a href= "https://www.goodreads.com/user/show/35150018-mark-saroufim">Reading List</a></li>
- <li class="active"><a href="https://www.youtube.com/watch?v=rdxfx1mM_nU">My first standup show</a></li>
 
- </ul>
+<nav class="main-nav">
 
+
+<div align="left">Mark Saroufim's blog</span>
+<div align="right">
+  <a href="/">Home</a>
+  <a href="/archive">Blog Archive</a>
+  <a href="/about">About</a>
+
+  <a href= "https://www.linkedin.com/profile/view?id=94048952&trk=nav_responsive_tab_profile" target="_blank">LinkedIn</a>
+  <a href= "https://onedrive.live.com/redir?resid=5A5E73371630DFBB%212500" target="_blank">Academic CV</a>
+   <a href= "https://github.com/msaroufim" target="_blank">Github </a>
+  <!-- <a href= "https://www.goodreads.com/user/show/35150018-mark-saroufim">Reading List</a> -->
+  <a href="https://www.youtube.com/watch?v=rdxfx1mM_nU" target="_blank">Standup</a>
+  </nav>
+</div>
 <script>
 mixpanel.track('page viewed', {
     'page name' : document.title,
@@ -59,16 +61,16 @@ mixpanel.track('page viewed', {
 
 </script>
 
+<hr>
 
+<!--
 <div id="mark" style="width:20%">
 <h1>Mark Saroufim</h1>
-<!-- Make image link to something, maybe twitter account? -->
-<!--Had issues with just linking image in img folder
-trying an external reference now, should be careful if image ever disappers it means postimg server took it down -->
+
  <img class="avatar" src="http://s21.postimg.org/l7czx6puv/avatar.jpg"></img>
 </div>
 </aside>
-
+ -->
    <!--  <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -88,18 +90,18 @@ trying an external reference now, should be careful if image ever disappers it m
       </div>
     </div> -->
 
-    <div class="container" style="width:50%">
+    <div class="container" style="width:80%">
 
 
 
 <div class="row-fluid">
     <div class="span8">
-        <h2 id="what_does_it_mean_to_say_pevent__something_">What does it mean to say \(P(event) = something \)</h2>
-<hr /><hr />
+        <h1 id="what_does_it_mean_to_say_pevent__something_">What does it mean to say \(P(event) = something \)</h1>
+
 <p>This blog post is an attempt to explain the following <a href="https://www.dropbox.com/s/zwio6k94ix40q1s/ItsOnlyAGame.pdf">tutorial</a> to a more general audience. I gave that tutorial to explain some of my favorite ideas in the Shafer and Vovk book <a href="http://www.amazon.com/Probability-Finance-Its-Only-Game/dp/0471402265/ref=sr_1_1?ie=UTF8&qid=1424136245&sr=8-1&keywords=probability+and+finance">Probability and Finance, It’s only a Game!</a></p>
 
-<h3 id="horse_gambling_games">Horse Gambling Games</h3>
-<hr />
+<h2 id="horse_gambling_games">Horse Gambling Games</h2>
+
 <p>Way before Probability Theory was its own field let alone a field with rigorous foundations, two fairly celebrated mathematicians Pascal and Fermat wanted to win a ton of money betting on horses. Before doing so they of course had to first check whether horse gambling was a fair game. This meant they had to first define what it means for a game to be fair. The definition they came up with involves two parties which we’ll call A and B involved in a zero sum game.</p>
 
 <ul>
@@ -116,14 +118,16 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>P(event) = how much money you’re willing to spend on a game where you could win 1$.</p>
 </blockquote>
 
-<h3 id="mathematization_of_probability_theory">Mathematization of Probability Theory</h3>
-<hr />
+<p><br /></p>
+
+<h2 id="mathematization_of_probability_theory">Mathematization of Probability Theory</h2>
+
 <p>The above definition is indeed intuitive but it hardly seems inline with what we’d imagine a mathematical definition of probability would look like.</p>
 
 <p>Kolmogorov rigorously formalized probability theory using just 6 axioms; what was previously a subfield of mathematical physics became its own deep topic. I might need a whole other blog post on Kolmogorov’s 6 axioms but I’ll mention one small but interesting thing here. The sixth axiom uses what is called the axiom of choice. The axiom of choice is . For our purposes though it would be interesting to explore the possibility of a different foundation to probability theory in games instead of measure theory.</p>
 
-<h3 id="sequential_learning">Sequential Learning</h3>
-<hr />
+<h2 id="sequential_learning">Sequential Learning</h2>
+
 <p>Von Mises was the first to propose that probability theory could find its foundation in games.</p>
 
 <ul>
@@ -136,8 +140,8 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <p>Fortunately we also have a method of quantifying how random a length \(n \) bitstring is: Kolmogorov Complexity!</p>
 
-<h3 id="a_brief_fugue_into_kolmogorov_complexity">A brief fugue into Kolmogorov Complexity</h3>
-<hr />
+<h2 id="a_brief_fugue_into_kolmogorov_complexity">A brief fugue into Kolmogorov Complexity</h2>
+
 <p>Suppose you’re given two strings:</p>
 
 <ul>
@@ -152,8 +156,8 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <p>If there’s enough interest in the comments I can write a whole other blog post about Kolmogorov complexity and the halting problem but to give you an intuition of what the halting problem is all about: just think about how you’d know in a finite amount of time if something is going to run forever. Turns out computer science has answers to lots of philosophical questions.</p>
 
-<h3 id="the_weak_law_of_large_numbers">The weak law of large numbers</h3>
-<hr />
+<h2 id="the_weak_law_of_large_numbers">The weak law of large numbers</h2>
+
 <p>The weak law of large numbers is generally covered in undergraduate statistics class using measure theoretic tools even though measure theory is outside the scope of many undergraduate programs. But it’s worth going over the “classical” proof to appreciate the game theoretic proof.</p>
 
 <p>We will make the typical assumption that we are observing \(n \) random variables \(X_1 \dots X_n \) are i.i.d variables with mean \(\mu \) and variance \(\sigma^2 \).</p>
@@ -166,8 +170,8 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <p>\(P(|A_n - \mu | \geq \epsilon) \leq Var[A_n]/ \sigma^2 = \frac{\sigma^2}{n \epsilon^2} \)</p>
 
-<h3 id="bounded_fair_coin_game">Bounded Fair Coin Game</h3>
-<hr />
+<h2 id="bounded_fair_coin_game">Bounded Fair Coin Game</h2>
+
 <p>Now we will instead show how to prove the weak law of large numbers using games instead. We will setup a game between two parties that we will call the skeptic and nature.</p>
 
 <ul>
@@ -199,13 +203,13 @@ trying an external reference now, should be careful if image ever disappers it m
 <p>We claim that the skeptic wins \(K_n &gt; 0 \) for all \(n \) we call this condition the no-bankruptcy condition. And if one two things happen either:</p>
 
 <ul>
-<li>\(\lim_{n \rightarrow \infty} \sum_{i = 1}^{n}x_i = 0 \)</li>
-</ul>
+<li>
+<p>\(\lim_{n \rightarrow \infty} \sum_{i = 1}^{n}x_i = 0 \) Or</p>
+</li>
 
-<p>Or</p>
-
-<ul>
-<li>\(\lim_{ \rightarrow \infty} K_n = \infty\)</li>
+<li>
+<p>\(\lim_{ \rightarrow \infty} K_n = \infty\)</p>
+</li>
 </ul>
 
 <p>Everytime an author proposes new definitions, I find it helpful to understand what the equations mean in plain english.</p>
@@ -216,8 +220,8 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <p>Note how I use the term arbitrarily instead of the term randomly, this distinction seems pendantic but is quite important. Since randomly means according to some distribution while arbitrarily means there is absolutely no limitation to how a random variable may act.</p>
 
-<h3 id="proving_the_bounded_fair_coin_game">Proving the bounded fair coin game</h3>
-<hr />
+<h2 id="proving_the_bounded_fair_coin_game">Proving the bounded fair coin game</h2>
+
 <p>Now for the proof: If the skeptic bets an infinitely small amount \(\epsilon \) on heads then nature will be forced to not play heads often or else the skeptic will become infinitely rich. Therefore nature will start playing tails, when that happens the skeptic starts playing tails. Essentially this almost silly example provides a proof of concept for machine learning: If nature’s strategy is not completely arbitrary then nature’s strategy has an underlying strategy that can be learnt from data!</p>
 
 <blockquote>
@@ -230,13 +234,12 @@ trying an external reference now, should be careful if image ever disappers it m
 
 <p>\(A \wedge B \rightarrow A \)</p>
 
-<h3 id="epilogue">Epilogue</h3>
-<hr />
+<h2 id="epilogue">Epilogue</h2>
+
 <p>The efficient market hypothesis is an economic concept that states that it is impossible to consistently achieve better returns than the market. Did we also prove this statement as a corollary?</p>
     </div>
     <div class="span4">
         <h3>About me</h3>
-<hr />
 <p>Hey I'm Mark, I work at Microsoft as a PM in the Shared Data Platform. Before that I spent a few months working in the Analytics group at Bing Ads. Prior to that I spent two years at UC San Diego doing research in Machine Learning. In between those two years, I interned over the summer at JPL in NASA's first data science group. </p>
 
 <h3>Latest Posts</h3>
@@ -253,6 +256,7 @@ trying an external reference now, should be careful if image ever disappers it m
     <li><a href="/2015/02/14/probability-without-measure/">Probability without measure theory</a></li>
   
 </ul>
+
     </div>
 </div>
 
@@ -274,7 +278,7 @@ trying an external reference now, should be careful if image ever disappers it m
  -->
 
 
-    
+
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -299,8 +303,10 @@ trying an external reference now, should be careful if image ever disappers it m
 
 
 </div>
+
   </body>
 </html>
+
 
 
 

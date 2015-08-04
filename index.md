@@ -2,12 +2,9 @@
 title: First Post
 layout: default
 ---
-# Math, Machine Learning & Programming fugues
 
 
 
----
----
 
 {% for post in site.posts limit: 10 %}
 <div class="row-fluid">
