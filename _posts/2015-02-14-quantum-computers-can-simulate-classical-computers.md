@@ -14,6 +14,8 @@ That may sound controversial but it really isn't.
 
 > Do algorithmists think of the electromagnetic waves storing bits on disk when they write pseudocode? 
 > 
+<br>
+
 Theorists are generally unaware of how computers work and more applied computer scientists are similarly unaware of how electronics work and justly so! Abstraction is powerful and allows one to focus on problems that exist at different conceptual levels. Why should quantum computing be any different? The approach that makes the most sense is to take it as a given that physicists will provide us with a basic set of quantum logic gates whether they are spinning or freezing or backflipping elementary particles in various gases is irrelevant to us. We can make more progress if we work with quantum logic gates as opposed to quantum physics.
 
 ## What is a Quantum Computer?
@@ -120,7 +122,7 @@ This doesn't seem like a lot but it is quite significant! Think of how you'd sim
 
 ## Epilogue
 
-Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover's search algorithm and Shor's factoring algorithm. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I'd recommend you check out the [ topics](http://www.cse.ucsd.edu/theory_reading_group/) we had in theory reading group at UCSD.  
+Good news is that quantum computers could probably run your favorite videogame. This is however not the most interesting property of quantum computers, if there is any interest then I can probably have some followup posts on Grover's search algorithm and Shor's factoring algorithm. Although those are arguably the most well known quantum algorithms there are many results that are incredibly funky and I'd recommend you check out the [topics](http://www.cse.ucsd.edu/theory_reading_group/) we had in the theory reading group at UCSD.  
 
  The two big open questions are perhaps: can quantum computers actually be built? If they can, can they solve more problems than classical computers? The complexity theory community seems to think so. As Aaronson would say: all possibilities are equally intriguing since either we learn some pretty fundamental limitations of phyics or we get swanky new quantum computers.
 

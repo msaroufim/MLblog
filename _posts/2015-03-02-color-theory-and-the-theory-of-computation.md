@@ -16,7 +16,7 @@ My brief foray into design has led me to find this commonly held belief in the d
 
 > "A device that is able to reproduce the entire visible color space is an unrealized goal within the engineering of color displays and printing processes".
 <br>
-The above is directly pulled from Wikipedia. Usually I would not attach much thought to such a statement but its formulation reminded me pretty strongly of a type of statement that I've encountered in a theory of computation class I TA'd for back in UCSD.
+The above is directly pulled from Wikipedia. Usually I would not attach much thought to such a statement but its formulation reminded me pretty strongly of a type of statement that I've encountered when studying the theory of computation.
 
 For this blog post I will prove a stronger statement:
 
