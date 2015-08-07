@@ -50,7 +50,7 @@ A quantum computer is then a function \\(f \\) of \\(n \\) quantum bits that whe
 This is a neat result that I proved in the introductory lecture of the seminar, of course this result is not novel in any way: I'm not sure if it was even formally stated in a paper or just taken as a known trivial result but regardless it's a good exercise to prove your first result about quantum computers. 
 
 ### Proving that quantum computers are at least as powerful as classical computers using truth tables
----
+
 Let's take a look at the truth table of a NAND gate where the first two columns represent the two inputs and the last colum presents the output.
 
 
