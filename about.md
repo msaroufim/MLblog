@@ -3,6 +3,7 @@ layout: default
 title: About
 ---
 
+
 ## Update: Aug 3, 2015
 
 My schedule has been packed since I've started working on the [MSFT/AOL deal](http://www.reuters.com/article/2015/06/29/us-microsoft-employment-idUSKCN0P92PT20150629). Prior to that I gained a deep interest in developer UX as in:
