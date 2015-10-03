@@ -96,37 +96,14 @@ mixpanel.track('page viewed', {
 
 <div class="row-fluid">
     <div class="span8">
-        <h2 id="blog_posts">Blog Posts</h2>
+        <h1 id="node_in_your_browser">node in your browser</h1>
 
-<ul>
-<li>
-<p>03 Oct 2015 » <a href="/2015/10/03/node-in-your-browser/">node.js in your browser</a></p>
-</li>
+<p>Node got us javascript on the backend and <a href="https://tonicdev.com/docs/embed">Tonic</a> got us Node on the browser. This allows us to launch a new browser instance from a node shell which is running on your browser. You can also extrapolate the aforementioned scenario to all sorts of perverse implementations of browsers running in shells running on a browser running in a shell etc</p>
 
-<li>
-<p>18 Mar 2015 » <a href="/2015/03/18/alternatives-to-numbers/">Alternative Numbering Schemes</a></p>
-</li>
+<p>With Tonic, I see no need to have static Github gists - Tonic is a full node environment that’s far more expressive than a single static image representing mostly color coded text. Your readers will be much more engaged with your code snippets as they can read them, change them and run them till they understand exactly how they work.</p>
 
-<li>
-<p>08 Mar 2015 » <a href="/2015/03/08/occam-razor-explained/">Occam’s Razor</a></p>
-</li>
-
-<li>
-<p>02 Mar 2015 » <a href="/2015/03/02/color-theory-and-the-theory-of-computation/">Color Theory and Theory of Computation</a></p>
-</li>
-
-<li>
-<p>14 Feb 2015 » <a href="/2015/02/14/quantum-computers-can-simulate-classical-computers/">Quantum Computers Can Simulate Classical Computers</a></p>
-</li>
-
-<li>
-<p>14 Feb 2015 » <a href="/2015/02/14/probability-without-measure/">Probability without measure theory</a></p>
-</li>
-
-<li>
-<p>15 Nov 2014 » <a href="/2014/11/15/scifi-and-predicting-the-future/">Why Sci-Fi might not be so good at predicting the future</a></p>
-</li>
-</ul>
+<p>Go ahead and get started! You can import any of your favorite npm packages by just typing in <code>require(&#39;package_name&#39;)</code> and then type in any javascript code.</p>
+<script data-element-id='my-element' src='https://embed.tonicdev.com'><![CDATA[]]></script>
     </div>
     <div class="span4">
         <hr>
@@ -154,7 +131,22 @@ mixpanel.track('page viewed', {
     </div>
 </div>
 
-<!--   -->
+<!--  
+ <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'marksaroufim'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+ -->
 
 
 
@@ -164,6 +156,22 @@ mixpanel.track('page viewed', {
 
 
 <div>&copy Mark Saroufim 2015 </div> <br>
+
+<!-- Add Disqus comments. -->
+<div id="disqus_thread" class="comments"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'marksaro'; // required: replace example with your forum shortname
+  var disqus_identifier = "/2015/10/03/node-in-your-browser/";
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 </div>
 
@@ -175,7 +183,7 @@ mixpanel.track('page viewed', {
 
 <!-- <div id=twitter>
 If you liked this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/archive/&text=Archive&via=MarkSaroufim" 
+<a href="https://twitter.com/intent/tweet?url=http://www.marksaroufim.com/2015/10/03/node-in-your-browser/&text=node.js in your browser&via=MarkSaroufim" 
    target="_blank">
   share it with your followers</a> 
 or 
