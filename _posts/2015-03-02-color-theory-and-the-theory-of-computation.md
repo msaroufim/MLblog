@@ -15,13 +15,13 @@ Over the past few months I've been trying to train my eye to appreciate better d
 My brief foray into design has led me to find this commonly held belief in the design community.
 
 > "A device that is able to reproduce the entire visible color space is an unrealized goal within the engineering of color displays and printing processes".
-<br>
+
 The above is directly pulled from Wikipedia. Usually I would not attach much thought to such a statement but its formulation reminded me pretty strongly of a type of statement that I've encountered when studying the theory of computation.
 
 For this blog post I will prove a stronger statement:
 
 > There cannot exist a device that can reproduce the entire visible color space.
-<br>
+
 ## The Godel, Escher and Bach argument
 
 I will prove the above statement by reducing it to another statement which was proven to be true in the wonderful [Godel, Escher and Bach](http://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567/ref=sr_1_1?ie=UTF8&qid=1425267550&sr=8-1&keywords=godel+escher+and+bach)
@@ -43,9 +43,9 @@ Similarly to how Hofstatder exploited the property of resonant frequency to make
 With this we can finally conclude that:
 
 > There cannot exist a device that can reproduce the entire visible color space.
-<br>
+
 In fact we have illustrated something much more powerful:
 
 > There cannot exist any device that can reproduce the entirety of any space.
-<br>
+
 And here I leave you with one of the deepest truths uncovered in Mathematics, Gödel's incompleteness theorem. I'll prove Gödel's incompleteness theorem in a formal but easy argument in my next blog post. What we will cover is specifically the process by which we inspect a printer or gramophone to find the respective encodings of color and sound that would cause them to malfunction.
