@@ -15,14 +15,14 @@ Way before Probability Theory was its own field let alone a field with rigorous 
 * If A pays x$
 * And B pays x$
 * The winner gets paid 2x$
-<br>
+
 This definition seems fairly intuitive because we can actually attribute a meaning to the title \\(P(event) = something \\) by claiming that:
 
 
 
 >P(event) = how much money you're willing to spend on a game where you could win 1$.
 
-<br>
+
 ## Mathematization of Probability Theory
 
 The above definition is indeed intuitive but it hardly seems inline with what we'd imagine a mathematical definition of probability would look like.
@@ -47,7 +47,7 @@ Suppose you're given two strings:
 
 * \\(A = 01 01 01 01 01 01 01 \\) 
 * \\(B = 00 10 01 00 10 11 11 \\)
-<br>
+
 My question is which string looks more random? Well one way to approach this is to see if a string has many repetitions and we notice indeed that \\(A \\) is simply 01 repeated 7 times so it's essentially the same message appended to itself 7 times. \\(B \\) on the other hand seems to lack such a clear looking pattern so we can claim that \\(B \\) is more random than \\(A \\). 
 
 This is exactly the notion that Kolmogorov complexity captures! Unfortunately, it is also impossible to determine the Kolmogorov complexity of a random string! Whaaaat? Kolmogorov complexity belongs to a class of problems called undecidable which means that it can be reduced to the halting problem.
@@ -76,7 +76,7 @@ Now we will instead show how to prove the weak law of large numbers using games 
 * \\(K\_i \\) will be the skeptic capital at time \\(i \\)
 * \\(M\_n \\) is the amount of tickets that the skeptic purchases
 * \\(x\_n \\) is the value of a ticket determined by nature
-<br>
+
 Now we can finally introduce the game:
 
 * \\(K\_0 = 1 \\)
@@ -84,7 +84,7 @@ Now we can finally introduce the game:
 	* Skeptic announces \\(M\_n \in R \\)
 	* Reality announces \\(x\_n \in \{0,1 \} \\)
 	* \\(K\_n = K\_{n - 1} + M\_{n}x\_{n} \\)
-<br>
+
 What we will prove is that there exists a winning strategy for the skeptic. But first we will use a favorite trick employed by philosophers and first define what we mean by winning. The relationship with the weak law of large numbers will come out soon.
 
 We claim that the skeptic wins \\(K\_n > 0 \\) for all \\(n \\) we call this condition the no-bankruptcy condition. And if one two things happen either:

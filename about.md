@@ -10,7 +10,6 @@ My schedule has been packed since I've started working on the [MSFT/AOL deal](ht
 
 > How do you create usable APIs to easily enable different product scenarios? I got to exercise that interest by onboarding PMs and devs to real time telemetry.
 
-<br>
 In my spare time I've been working on a wide range of stuff:
 
 * Setting up real time telemetry with sensors on Arduino
