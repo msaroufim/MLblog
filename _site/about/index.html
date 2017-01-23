@@ -96,106 +96,14 @@ mixpanel.track('page viewed', {
 
 <div class="row-fluid">
     <div class="span8">
-        <h2 id="update_aug_3_2015">Update: Aug 3, 2015</h2>
+        <p>Hello! I’m Mark and I’m a Program Manager at Microsoft. Most recently, I work in the AI group on smart email. I’m a strong proponent of UI-less products that just work magically. Before that I was a grad student at UC San Diego in ML. I also had stints at NASA’s Jet Propulsion Lab in their very first data science team and at UC Berkeley as a transportation engineer.</p>
 
-<p>My schedule has been packed since I’ve started working on the <a href="http://www.reuters.com/article/2015/06/29/us-microsoft-employment-idUSKCN0P92PT20150629">MSFT/AOL deal</a>. Prior to that I gained a deep interest in developer UX as in:</p>
-
-<blockquote>
-<p>How do you create usable APIs to easily enable different product scenarios? I got to exercise that interest by onboarding PMs and devs to real time telemetry.</p>
-</blockquote>
-
-<p>In my spare time I’ve been working on a wide range of stuff:</p>
-
-<ul>
-<li>
-<p>Setting up real time telemetry with sensors on Arduino</p>
-</li>
-
-<li>
-<p>Graphics programming to gain some solid experience in OpenGL and WebGL programming by taking <a href="https://class.coursera.org/webgl-001">Ed Angel’s coursera class</a></p>
-</li>
-
-<li>
-<p>Trying my hand at different Kaggle competitions</p>
-</li>
-
-<li>
-<p>Redesigning my blog to be more usable.</p>
-</li>
-</ul>
-
-<p>Things have been really hectic at work and I’ll try to update my blog once some of the craziness clears up with links or blog posts to all of the above.</p>
-
-<h2 id="update_feb_10_2015">Update: Feb 10, 2015</h2>
-
-<p>Since the beginning of February, I’ve been trying to flex some web development muscles. I hadn’t done any web development before but I’ve getting more excited about sharing some of my work so I’ve been frantically going over both frontend and backend books to do so.</p>
-
-<ul>
-<li>
-<p>JS and Jquery: It’s refreshing to see a good CS book written by people with a good design background. The book really is beautiful and the graphics help make a lot of things really clear. For example, I understood why Jquery was necessary by looking at graphical drawings of the DOM that show how .nextsibling works across different browsers.</p>
-</li>
-
-<li>
-<p>JS the good parts: A classic! and for a good reason too, I found myself going huh to wow. By the end of this good I couldn’t understand why people complained so much about JS. Some favorites included:</p>
-</li>
-</ul>
-<div class='highlight'><pre><code class='javascript'>   <span class='kd'>var</span> <span class='nx'>memoizer</span> <span class='o'>=</span> <span class='kd'>function</span> <span class='p'>(</span><span class='nx'>memo</span><span class='p'>,</span> <span class='nx'>fundamental</span><span class='p'>)</span> <span class='p'>{</span>
-        <span class='kd'>var</span> <span class='nx'>shell</span> <span class='o'>=</span> <span class='kd'>function</span> <span class='p'>(</span><span class='nx'>n</span><span class='p'>)</span> <span class='p'>{</span>
-            <span class='kd'>var</span> <span class='nx'>result</span> <span class='o'>=</span> <span class='nx'>memo</span><span class='p'>[</span><span class='nx'>n</span><span class='p'>];</span>
-            <span class='k'>if</span> <span class='p'>(</span><span class='k'>typeof</span> <span class='nx'>result</span> <span class='o'>!==</span> <span class='s1'>&#39;number&#39;</span><span class='p'>)</span> <span class='p'>{</span>
-                <span class='nx'>result</span> <span class='o'>=</span> <span class='nx'>fundamental</span><span class='p'>(</span><span class='nx'>shell</span><span class='p'>,</span> <span class='nx'>n</span><span class='p'>);</span>
-                <span class='nx'>memo</span><span class='p'>[</span><span class='nx'>n</span><span class='p'>]</span> <span class='o'>=</span> <span class='nx'>result</span><span class='p'>;</span>
-            <span class='p'>}</span>
-            <span class='k'>return</span> <span class='nx'>result</span><span class='p'>;</span>
-        <span class='p'>};</span>
-        <span class='k'>return</span> <span class='nx'>shell</span><span class='p'>;</span>
-    <span class='p'>};</span>
-</code></pre></div>
-<ul>
-<li>JS Patterns: This book made me understand why people hate on JS so much. I probably need to go over the code reuse chapter again. The objective is for me to understand how to come up with the below snippet from the perspective of someone who has never seen it.</li>
-</ul>
-
-<p><br /></p>
-<div class='highlight'><pre><code class='javascript'><span class='kd'>function</span> <span class='nx'>inherit</span><span class='p'>(</span><span class='nx'>C</span><span class='p'>,</span> <span class='nx'>P</span><span class='p'>)</span> <span class='p'>{</span>
-    <span class='kd'>var</span> <span class='nx'>F</span> <span class='o'>=</span> <span class='kd'>function</span> <span class='p'>()</span> <span class='p'>{};</span>
-    <span class='nx'>F</span><span class='p'>.</span><span class='nx'>prototype</span> <span class='o'>=</span> <span class='nx'>P</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>;</span>
-    <span class='nx'>C</span><span class='p'>.</span><span class='nx'>prototype</span> <span class='o'>=</span> <span class='k'>new</span> <span class='nx'>F</span><span class='p'>();</span>
-    <span class='nx'>C</span><span class='p'>.</span><span class='nx'>uber</span> <span class='o'>=</span> <span class='nx'>P</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>;</span>
-    <span class='nx'>C</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>.</span><span class='nx'>constructor</span> <span class='o'>=</span> <span class='nx'>C</span><span class='p'>;</span>
-<span class='p'>}</span>
-</code></pre></div>
-<ul>
-<li>
-<p>Functional JS: The book looks good so far but I’m still unsure what underscore.js brings that can’t be implemented using the helper functions that JS the good parts highlights. I’ll have to read more to find out</p>
-</li>
-
-<li>
-<p>Node.js in Action is a good book, it’s difficult to read without the online code companion. I used it to implement a simple RESTFUL command line todo list. I’m currently working on a bunch of more interesting node projects now.</p>
-</li>
-
-<li>
-<p>If Hemingway wrote JS: This is a creative programming book that shows code examples written in the style of authors ranging from 2pac, Kerouac to Roy. I expected this book to be more fun, I can’t say that I got much out of it. I’m remined of Richard Hamming’s remark which goes: If you wanna be succesful then study successes.</p>
-</li>
-
-<li>
-<p>Front-End Frameworks: I’m still scratching the surface here. I started looking into the ember and ember data docs and really appreciated how well implemented the observer pattern (discussed in JS patterns) was used to create awesome functionality like:</p>
-</li>
-</ul>
-<div class='highlight'><pre><code class='javascript'><span class='nx'>fullName</span><span class='o'>:</span> <span class='kd'>function</span><span class='p'>()</span> <span class='p'>{</span>
-    <span class='k'>return</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>get</span><span class='p'>(</span><span class='s1'>&#39;firstName&#39;</span><span class='p'>)</span> <span class='o'>+</span> <span class='s1'>&#39; &#39;</span> <span class='o'>+</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>get</span><span class='p'>(</span><span class='s1'>&#39;lastName&#39;</span><span class='p'>);</span>
-  <span class='p'>}.</span><span class='nx'>property</span><span class='p'>(</span><span class='s1'>&#39;firstName&#39;</span><span class='p'>,</span> <span class='s1'>&#39;lastName&#39;</span><span class='p'>)</span>
-<span class='p'>});</span>
-</code></pre></div>
-<ul>
-<li>Ember Data also feels like a node brainchild where a data store (data cached into the browser) does not need to be aware of how an adapter actually gets data whether its a server DB call or external API call. <a href="http://www.smashingmagazine.com/2013/11/07/an-in-depth-introduction-to-ember-js/">This article</a> goes over some of the stuff I liked in more detail</li>
-</ul>
-
-<p>The naming convention also affords a lot of advantages since it makes it easy to go through online code examples. I haven’t necessarily settled for Ember, I’m also looking into Angular which at a first glance seemed pretty complicated but I’m not one to judge the quality of a framework after going through a tutorial. DAE HASKAL FOR WEBSCALE?</p>
+<p>In my spare time, I enjoy skiing, climbing, graphic novels, board games and video games.</p>
     </div>
     <div class="span4">
         <hr>
 <h3>About me</h3>
-<p>Hey I'm Mark, I work at Microsoft as a PM in the Shared Data Platform. Before that I spent a few months working in the Analytics group at Bing Ads. Prior to that I spent two years at UC San Diego doing research in Machine Learning. In between those two years, I interned over the summer at JPL in NASA's first data science group. </p>
+
 
 <hr>
 <h3>Latest Posts</h3>
